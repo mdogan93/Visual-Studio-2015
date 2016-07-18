@@ -1,0 +1,84 @@
+﻿$dot-size: 3vh;                            //Noktaların yarıçapını belirtir
+$color: rgba(255,255,255, 1);               //Noktaların rengini belirler.
+$border-top-radius: 0%;                    //Top left border'ın eğim derecesini belirler (0 kare, 50 ve üzeri çember)
+$border-bottom-radius: 0%;                 //Bottom left  border'ın eğim derecesini belirler (0 kare, 50 ve üzeri çember)
+$animation-style: alternate;              //Animasyon stilini belirler
+$animation-duration: 0.6s;                  //Animasyon süresini belirler
+
+$listOfParsers: ms webkit o moz; 
+
+@mixin prefix($property,$value,$prefixes: () ) {
+    #{$property}: $value;
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property}: $value;
+    }   
+}
+
+@mixin frame($name,$property,$value1,$value2){
+    @-ms-keyframes #{$name}{
+        0%{
+            #{'-ms-'+ $property}:  $value1 
+        }
+        100%{
+           #{'-ms-'+ $property}: $value2 
+        }
+    }
+    @-webkit-keyframes #{$name}{
+        0%{
+            #{'-webkit-'+ $property}:  $value1 
+        }
+        100%{
+            #{'-webkit-'+ $property}:  $value2 
+        }
+    }
+    @-o-keyframes #{$name}{
+        0%{
+             #{'-o-'+ $property}:  $value1 
+        }
+        100%{
+             #{'-o-'+ $property}: $value2 
+        }
+    }
+    @-moz-keyframes #{$name}{
+        0%{
+             #{'-moz-'+ $property}:  $value1 
+        }
+        100%{
+            #{'-moz-'+ $property}:  $value2 
+        }
+    }
+    @keyframes #{$name}{
+        0%{
+             #{$property}: $value1 
+        }
+        100%{
+             #{$property}: $value2 
+        }
+    } 
+}
+
+.vanishing-spans {text-align:center;}
+
+.vanishing-spans span {
+  display:inline-block;
+  margin:$dot-size/3 0;
+  width:$dot-size;
+  height:$dot-size;
+  background-color:$color;
+  border-radius:$border-top-radius $border-bottom-radius;
+}
+
+.vanishing-spans span:nth-child(1) {
+@include prefix(animation,vanishing-spans $animation-duration infinite $animation-style 0s,$listOfParsers);
+}
+.vanishing-spans span:nth-child(2) {
+@include prefix(animation,vanishing-spans $animation-duration infinite $animation-style $animation-duration/3,$listOfParsers);
+}
+.vanishing-spans span:nth-child(3) {
+@include prefix(animation,vanishing-spans $animation-duration infinite $animation-style 2*$animation-duration/3,$listOfParsers);
+}
+.vanishing-spans span:nth-child(4) {
+@include prefix(animation,vanishing-spans $animation-duration infinite $animation-style $animation-duration,$listOfParsers);
+}
+
+@include frame(vanishing-spans,opacity,0.1,1);

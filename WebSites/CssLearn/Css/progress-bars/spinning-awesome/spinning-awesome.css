@@ -1,0 +1,59 @@
+﻿@charset "UTF-8";
+/*! Font Awesome 4.6.3 by @davegandy - http://fontawesome.io - @fontawesome
+ *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
+ */
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font-awesome-4.6.3/fonts/fontawesome-webfont.eot?v=4.6.3");
+  src: url("../font-awesome-4.6.3/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3") format("embedded-opentype"), url("../font-awesome-4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3") format("woff2"), url("../font-awesome-4.6.3/fonts/fontawesome-webfont.woff?v=4.6.3") format("woff"), url("../font-awesome-4.6.3/fonts/fontawesome-webfont.ttf?v=4.6.3") format("truetype"), url("../font-awesome-4.6.3/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular") format("svg");
+  font-weight: normal;
+  font-style: normal; }
+
+.spinning-awesome {
+  display: inline-block;
+  font: normal normal normal 3em FontAwesome;
+  text-align: center;
+  color: white;
+  text-rendering: auto;
+  width: 100%;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -ms-animation: spinning-awesome-spin 1.2s infinite normal steps(8);
+  -webkit-animation: spinning-awesome-spin 1.2s infinite normal steps(8);
+  -o-animation: spinning-awesome-spin 1.2s infinite normal steps(8);
+  -moz-animation: spinning-awesome-spin 1.2s infinite normal steps(8);
+  animation: spinning-awesome-spin 1.2s infinite normal steps(8); }
+
+.spinning-awesome:before {
+  content: ""; }
+
+@-ms-keyframes spinning-awesome-spin {
+  0% {
+    -ms-transform: rotate(0deg); }
+  100% {
+    -ms-transform: rotate(359deg); } }
+
+@-webkit-keyframes spinning-awesome-spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(359deg); } }
+
+@-o-keyframes spinning-awesome-spin {
+  0% {
+    -o-transform: rotate(0deg); }
+  100% {
+    -o-transform: rotate(359deg); } }
+
+@-moz-keyframes spinning-awesome-spin {
+  0% {
+    -moz-transform: rotate(0deg); }
+  100% {
+    -moz-transform: rotate(359deg); } }
+
+@keyframes spinning-awesome-spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(359deg); } }
+

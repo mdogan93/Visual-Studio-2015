@@ -1,0 +1,83 @@
+﻿$dot-size:3em;                              //noktaların büyüklüğünü belirler
+$font-color:rgba(255, 255, 255,1);          //noktaların rengini belirler
+$animation-duration:1.2s;                     //animasyonun süresini belirler
+$animation-style:steps(8);                  //Animasyon tarzını belirler
+$animation-direction:normal;                //Animasyon rotasyon yönünü belirler
+$content:"\f110";                           //Animasyonun içeriğini belirler
+
+$listOfParsers: ms webkit o moz;            //Used for browser compatibility                
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url('../font-awesome-4.6.3/fonts/fontawesome-webfont.eot?v=4.6.3');
+  src: url('../font-awesome-4.6.3/fonts/fontawesome-webfont.eot?#iefix&v=4.6.3') format('embedded-opentype'), url('../font-awesome-4.6.3/fonts/fontawesome-webfont.woff2?v=4.6.3') format('woff2'), url('../font-awesome-4.6.3/fonts/fontawesome-webfont.woff?v=4.6.3') format('woff'), url('../font-awesome-4.6.3/fonts/fontawesome-webfont.ttf?v=4.6.3') format('truetype'), url('../font-awesome-4.6.3/fonts/fontawesome-webfont.svg?v=4.6.3#fontawesomeregular') format('svg');
+  font-weight: normal;
+  font-style: normal;
+}
+@mixin prefix($property,$value,$prefixes: () ) {
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property}: $value;
+    }   
+    #{$property}: $value;
+}
+
+@mixin frame($name,$property,$value1,$value2){
+    @-ms-keyframes #{$name}{
+        0%{
+            #{'-ms-'+ $property}:  $value1 
+        }
+        100%{
+           #{'-ms-'+ $property}: $value2 
+        }
+    }
+    @-webkit-keyframes #{$name}{
+        0%{
+            #{'-webkit-'+ $property}:  $value1 
+        }
+        100%{
+            #{'-webkit-'+ $property}:  $value2 
+        }
+    }
+    @-o-keyframes #{$name}{
+        0%{
+             #{'-o-'+ $property}:  $value1 
+        }
+        100%{
+             #{'-o-'+ $property}: $value2 
+        }
+    }
+    @-moz-keyframes #{$name}{
+        0%{
+             #{'-moz-'+ $property}:  $value1 
+        }
+        100%{
+            #{'-moz-'+ $property}:  $value2 
+        }
+    }
+    @keyframes #{$name}{
+        0%{
+             #{$property}: $value1 
+        }
+        100%{
+             #{$property}: $value2 
+        }
+    } 
+}
+ @include frame(spinning-awesome-spin,transform,rotate(0deg),rotate(359deg));  
+.spinning-awesome {
+  display: inline-block;
+  font: normal normal normal $dot-size FontAwesome;
+  text-align:center;
+  color:$font-color;
+  text-rendering: auto;
+  width:100%;
+  overflow:hidden;
+
+  -webkit-font-smoothing: antialiased;
+  @include prefix(animation,spinning-awesome-spin $animation-duration infinite $animation-direction $animation-style,$listOfParsers);
+}
+
+.spinning-awesome:before {
+  content: $content;
+}
+

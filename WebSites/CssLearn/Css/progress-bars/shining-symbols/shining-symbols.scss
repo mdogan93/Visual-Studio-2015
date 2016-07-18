@@ -1,0 +1,70 @@
+﻿$symbol-size: 30px;                     // Sembolün boyutunu belirler.
+$odd-color:#fff;                     // Tek span elementlerinin rengini belirler.
+$even-color:#fff;                    // Çift span elementlerinin rengini belirler.
+$animation-duration:0.4s;               // Animasyon süresini belirler.
+
+$listOfParsers: ms webkit o moz;        //Used for browser compatibility     
+
+@mixin prefix($property,$value,$prefixes: () ) {
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property}: $value;
+    }   
+    #{$property}: $value;
+}
+
+@mixin frame($name,$property,$value){
+   @-ms-keyframes #{$name}{
+        to{
+            #{'-ms-' + $property}: $value;
+            opacity: 0.6; 
+        }
+   }
+   @-webkit-keyframes #{$name}{
+         to{
+            #{'-webkit-' + $property}: $value;
+            opacity: 0.6; 
+         }
+   }
+    @-o-keyframes #{$name}{
+         to{
+            #{'-o-' + $property}: $value;
+            opacity: 0.6; 
+         }
+   }
+    @-moz-keyframes #{$name}{
+        to{
+            #{'-moz-' + $property}: $value;
+            opacity: 0.6; 
+        }
+   }
+    @keyframes #{$name}{
+       to{
+            #{'-moz-' + $property}: $value;
+            opacity: 0.6; 
+       }
+  }
+}
+
+@include frame(pulse,transform,scale(0.75));
+
+.shining-symbols {
+  color: $even-color;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: $symbol-size;
+  opacity: 0.8;
+  text-align:center;
+
+  span {
+    display: inline-block;
+    @include prefix(animation,pulse $animation-duration alternate infinite ease-in-out,$listOfParsers);
+    &:nth-child(odd) {
+        color:$odd-color;
+      @include prefix(animation-delay,$animation-duration,$listOfParsers);
+    }
+  }
+}
+
+
+
+

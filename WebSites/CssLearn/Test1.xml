@@ -1,0 +1,74 @@
+﻿<members>
+  <member>
+    <name>Mehmet</name>
+    <surname>Dogan</surname>
+    <gender>Male</gender>
+    <telephone>5378164401</telephone>
+    <email>mehmet</email>
+    <city>İstanbul</city>
+    <hobby>Football Fitness </hobby>
+  </member>
+  <member>
+    <name>ares</name>
+    <surname>sra</surname>
+    <gender>Female</gender>
+    <telephone>5378164401</telephone>
+    <email>sas</email>
+    <city>Bursa</city>
+    <hobby>Football Basketball Fitness </hobby>
+  </member>
+  <member>
+    <name>ali</name>
+    <surname>veli</surname>
+    <gender>Male</gender>
+    <telephone>532222</telephone>
+    <email>mehme</email>
+    <city>Ankara</city>
+    <hobby>Football Fitness </hobby>
+  </member>
+  <member>
+    <name>rara</name>
+    <surname>sss</surname>
+    <gender>Female</gender>
+    <telephone>123213</telephone>
+    <email>sad123</email>
+    <city>Ankara</city>
+    <hobby>Basketball Fitness </hobby>
+  </member>
+  <member>
+    <name>user1</name>
+    <surname>us1</surname>
+    <gender>Male</gender>
+    <telephone>1111</telephone>
+    <email>user1@gma</email>
+    <city>Ankara</city>
+    <hobby>Basketball Snowboard </hobby>
+  </member>
+  <member>
+    <name>kkk</name>
+    <surname></surname>
+    <gender>Male</gender>
+    <telephone></telephone>
+    <email></email>
+    <city>Ankara</city>
+    <hobby>Fitness </hobby>
+  </member>
+  <member>
+    <name>mr</name>
+    <surname>feat</surname>
+    <gender>Male</gender>
+    <telephone>05322146</telephone>
+    <email>krker@gmail.com</email>
+    <city>Ankara</city>
+    <hobby>Basketball Fitness </hobby>
+  </member>
+  <member>
+    <name>cez</name>
+    <surname>tar</surname>
+    <gender>Female</gender>
+    <telephone>532</telephone>
+    <email>merdo@gmail.com</email>
+    <city>İstanbul</city>
+    <hobby>Football Fitness </hobby>
+  </member>
+</members>

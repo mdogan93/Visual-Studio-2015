@@ -1,0 +1,181 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Css/_homePage.css">
+    <link rel="stylesheet" href="Css/vanishing-dots.css">
+    <link rel="stylesheet" href="Css/spinning-awesome.css">
+    <link rel="stylesheet" href="Css/circular-arc.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+
+
+    <script>
+        $(document).ready(function () {
+            $("#second").click(function () {
+                $.ajax({
+                    beforeSend: function(){
+                        $('#loadCompCountry').css("display", "block");
+                    },
+                    complete: function(){
+                        $('#loadCompCountry').css("display", "none");
+                    },
+                    type: "GET",
+                    url: "testAja.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        $("#CompCountry").append("<ul></ul>");
+                        $(xml).find('CD').each(function () {
+                            var cdCountry = $(this).find('COUNTRY').text();
+                            var cdComp = $(this).find('COMPANY').text();
+                            $("<li></li>").html(cdCountry + ' , ' + cdComp).appendTo("#CompCountry");
+                        });
+                    },
+                    error: function () {
+                        alert("top req ");
+                    }
+                });    
+            });
+
+            $("#third").click(function () {
+               $.ajax({
+                   beforeSend: function(){
+                       $("#loadTitleArtist").css("display", "block");
+                   },
+                   complete: function(){
+                       $("#loadTitleArtist").css("display", "none");
+                   },
+                    type: "GET",
+                    url: "testB.xml",
+                    dataType: "xml",
+                    success: function (xml) {
+                        $("#titleArtist").append("<ul></ul>");
+                        $(xml).find('CD').each(function () {
+                            var cdTitle = $(this).find('TITLE').text();
+                            var cdArtist = $(this).find('ARTIST').text();
+                            $("<li></li>").html(cdTitle + ' , ' + cdArtist).appendTo("#titleArtist")
+                        });
+                    },
+                    error: function () {
+                        alert("nonono ");
+                    }
+                });
+            });
+            
+        });
+
+    </script>
+
+</head>
+<body>
+    <div style="border:2px solid red">
+        <div class="navigation">
+            <ul class="navigation-list">
+                <li><a href="homePage.html">Logo</a></li>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">About</a></li>
+                <li class="dropdown-menu">
+                    <a href="#" class="drop-button">Service</a>
+                    <div class="dropdown-content">
+                        <a href="#">Leatherworking</a>
+                        <a href="#">Mining</a>
+                        <a href="#">Gathering</a>
+                        <a href="#">Tailor</a>
+                    </div>
+                </li>
+                <li><a href="#">Contact Us</a></li>
+                <li><a href="#">Log out</a></li>
+
+            </ul>
+
+        </div><!--.header-->
+
+        <div class="left-column clear-left">
+            <p>Hello,</p>
+            <p class="info-tooltip">
+                We create good ideas that have never been thought
+                <span class="tooltip-text">For more information, look through services</span>
+            </p>
+            <div>
+                "Man is still the most extraordinary computer of all."<br />
+                <a href=http://www.brainyquote.com/quotes/authors/j/john_f_kennedy.html target="_blank">Click To Read more from JFK</a>
+            </div>
+
+        </div><!--.left-column-->
+
+        <div class="front-content ">
+            <h1 style="text-align:center">Test Box</h1>
+            <p style="text-align:center"> We will test all loading bars here  </p>
+
+            <button id="first">Click Me! </button>
+            <div id="waiting" style="display:none">
+                <div class="vanishing-dots"></div>
+            </div>
+
+
+        </div><!--.front-content-->
+
+        <div class="front-content  ">
+            <form>
+                <label for="name">Full Name : </label>
+                <input type="text" id="name" />
+                <label for="gender">Gender : </label>
+                <input type="radio" name="gender" value="male"> Male
+                <input type="radio" name="gender" value="female"> Female
+                <input type="radio" name="gender" value="other"> Other
+                <br />
+                <br />
+                <label for="country">Country : </label>
+                <select id="country" name="country">
+                    <option value="usa">Australia</option>
+                    <option value="usa">Canada</option>
+                    <option value="usa">USA</option>
+                </select>
+                <input type="button" name="Submit" value="Submit" />
+
+            </form>
+
+
+        </div><!--.front-content-->
+
+        <div class="right-column">
+            <div id="right-column-animation-box">
+
+            </div>
+
+        </div><!--.right-column-->
+
+        <div class="front-content ">
+            <form>
+                <label for="search">Search : </label><br />
+                <input class="search-box" placeholder="">
+            </form>
+            <br />
+            <input type="button" id="second" value="Get my CD collection" style="width:100%;height:50px";>
+            <div id="loadCompCountry" style="display:none; width:100%; height:60px">
+                <div class="spinning-awesome"></div>
+            </div>
+            <div id="CompCountry" style="overflow:auto; height:200px"></div>
+
+
+
+        </div><!--.front-content-->
+
+        <div class="front-content ">
+            <input type="button" id="third" value="KNOCK KNOCK" style="width:100%;height:50px;">
+      
+                <div id="loadTitleArtist" style="display:none;width:50px;height:50px">
+                    <div class="circular-arc"></div>
+                </div>
+                <div id="titleArtist" style="width:100%; height:300px;overflow:auto">
+             
+            </div>
+        </div>
+
+        <div class="center clear-left">
+            All rights are reserved
+        </div>
+    </div>
+
+
+</body>
+</html>

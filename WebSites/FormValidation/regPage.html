@@ -1,0 +1,154 @@
+﻿
+
+
+<!DOCTYPE html>
+
+<html lang="en" data-enhance="false">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+    <meta name="google-signin-scope" content="profile email" />
+    <meta name="google-signin-client_id" content="335584424045-f7ko63ttrjg9tr5jjdt934fsf72jufnu.apps.googleusercontent.com" />
+
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="Js/jquery-3.0.0.min.js"></script>
+    <script src="Js/parsley.min.js"></script>
+    <script src="Js/words.js"></script>
+    <script src="Js/signUpValidator.js"></script>
+
+    <!-- CSS bundle ile entegre ediliyor: /Bundle.config -->
+    <link href="/Css/cssBundle1.css" rel="stylesheet" />
+    <link href="/Css/cssBundle2.css" rel="stylesheet" />
+
+    <!-- CSS bundle ile entegre ediliyor: /Bundle.config -->
+    <link href="/Css/cssBundle3.css" rel="stylesheet" />
+
+
+    <!-- main elementine atanacak ID -->
+    <script>
+        var pageIs = "login";
+        var pageClassName = "signUp";
+        var pageType = "type01";
+    </script>
+
+
+    <!-- CUSTOM SCROLL -->
+    <link href="/Css/customScroll.css" rel="stylesheet" />
+
+
+    <!-- TABBERS -->
+    <link href="/Css/tabbers.css" rel="stylesheet" />
+
+
+    <!-- Medium Editor -->
+    <link href="/Css/mediumEditor.css" rel="stylesheet" />
+
+
+    <!-- Tag Input -->
+    <link href="/Css/tagInput.css" rel="stylesheet" />
+
+
+    <!-- Select 2 ( auto Complate ) -->
+    <link href="/Css/select2.css" rel="stylesheet" />
+
+    <!-- Parsley -->
+    <link href="/Css/parsley.css" rel="stylesheet" />
+
+    <!-- validationTools-->
+    <link href="Css/validationTools.css" rel="stylesheet" />
+
+
+
+    <!-- HTML5 shim, for IE6-8 support of HTML5 elements ie8 -->
+    <!--[if lt IE 9]>
+
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+
+    <![endif]-->
+    <title>
+        Sign Up
+    </title>
+</head>
+<body>
+    <form method="post" action="./signup" id="ctl01" data-parsley-errors-messages-disabled data-parsley-validate >
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="Q3sJEAvcNReh8f6jfS+yrS06MZwsM6yb8nxwRliFMMstu6lJNYiiGm3kZQtkAo9AhRYxD4emrQvFIfhUKWOuzsvJsh2Dn7paxK51rgAxFw8=" />
+        </div>
+
+        <div class="aspNetHidden">
+            <input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="6299C51A" />
+        </div>
+
+
+               
+            <a href="javascript:void(0);" onclick="showPopUp('v1', 'v1', '#addPost');" class="addPostButton" data-stork-target="postAddUser" data-stork-action="receive" data-stork-one>
+                <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-addpost-light.png" />
+            </a>
+
+            <main>
+
+                <section class="section01 dynamicHeightNoHeaderV1 before text-c" data-stork-form="signUp" data-stork-options="{'sendUrl':'{APIUrl}/Users/Register/{CultureCode}'}">
+                    <input type="hidden" data-stork="{mutator=global|mutatorParameters=[AccessToken]}" />
+                    <input type="hidden" data-stork="{name=UserTypeId}" value="4" />
+                    <input type="hidden" data-stork="{name=StatusId}" value="0" />
+
+                    <input type="hidden" data-stork="{name=LanguageId}" value="2" />
+                    <input type="hidden" data-stork="{name=GenderId}" value="1" />
+                    <input type="hidden" data-stork="{name=RegistrationSource}" value="Web" />
+                    <input type="hidden" data-stork="{name=RegistrationSourceDetail}" value="Web Page" />
+                    <input type="hidden" data-stork="{name=StatusId}" value="0" />
+                    <input type="hidden" data-stork="{name=BirthDate}" value="1900-01-01" />
+
+                    <div class="accountFormContent middle text-c">
+                        <h1 class="faceIIII">Join now Brandalis</h1>
+                        <div class="formItem">
+                            <input type="text" data-ref="name" class="inputTypeE" placeholder="First Name" data-parsley-trigger="focusin focusout" data-stork="{name=FirstName}" data-parsley-group="signUp" data-parsley-required/>
+                            <img src="http://www.clker.com/cliparts/k/S/6/v/f/y/wrong-hi.png" data-id="name" class="not-valid-cross"/>
+                            <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-check-blue.png" data-id="name" class="valid-tick" />
+                            <span class="error-message">Lütfen bu alanı doldurunuz</span>
+                        </div>
+                        <div class="formItem">
+                            <input type="text" data-ref="surname" class="inputTypeE" placeholder="Last Name" data-parsley-trigger="focusin focusout" data-stork="{name=LastName}" data-parsley-group="signUp" data-parsley-required />
+                            <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-check-blue.png" data-id="surname" class="valid-tick" />
+                            <img src="http://www.clker.com/cliparts/k/S/6/v/f/y/wrong-hi.png" data-id="surname" class="not-valid-cross" />
+                            <span class="error-message">Lütfen bu alanı doldurunuz</span>
+                        </div>
+                        <div class="formItem">
+                            <input type="text" class="inputTypeE" data-ref="email" placeholder="E-Mail address" data-parsley-trigger="focusin focusout" data-stork="{name=Email}" data-parsley-group="signUp" data-parsley-required data-parsley-type="email" />
+                            <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-check-blue.png" data-id="email" class="valid-tick" />
+                            <img src="http://www.clker.com/cliparts/k/S/6/v/f/y/wrong-hi.png" data-id="email" class="not-valid-cross" />
+                            <span class="error-message">Lütfen geçerli bir e-mail adresi giriniz</span>
+                        </div>
+                        <div class="formItem">
+                            <input type="text" class="inputTypeE" data-ref="username" placeholder="Username" data-parsley-trigger="focusin focusout" data-stork="{name=UserName}" data-parsley-group="signUp" data-parsley-required />
+                            <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-check-blue.png" data-id="username" class="valid-tick" />
+                            <img src="http://www.clker.com/cliparts/k/S/6/v/f/y/wrong-hi.png" data-id="username" class="not-valid-cross" />
+                            <span class="error-message">Lütfen bu alanı doldurunuz</span>
+                        </div>
+                        <div class="formItem">
+                            <input type="password" data-ref="password" class="inputTypeE v4" placeholder="Password" data-parsley-trigger="focusin focusout" data-stork="{name=Password|mutator=sha256}" data-parsley-group="signUp" data-parsley-required data-parsley-minlength="8" />
+                            <img src="" class="strong" />
+                            <img src="http://labs.pixelsoftoffice.com/BrandalisUI/assets/images/icon-check-blue.png" data-id="password" class="valid-tick" />
+                            <img src="http://www.clker.com/cliparts/k/S/6/v/f/y/wrong-hi.png" data-id="password" class="not-valid-cross" />
+                            <span class="error-message">Lütfen bu alanı doldurunuz</span>
+                        </div>
+
+                        <div class="text02">
+                            <p class="faceLLLL">By clicking Sign Up, you agree to our <a href="#" class="linkFF">Terms</a> and that you have read our <a href="#" class="linkFF">Data Policy</a>, including our <a href="#" class="linkFF">Cookie Use</a>.</p>
+                        </div>
+
+                        <a href="#" onclick="validateThis()" class="buttonP before" data-stork-target="signUp" data-stork-action="send">
+                            <span class="middle">Sign Up</span>
+                        </a>
+
+                        <div class="text01">
+                            <p class="faceKKKK">Have an account? <a href="http://labs.pixelsoftoffice.com/BrandalisUI/tr-TR/login" class="linkEE">Log in</a></p>
+                        </div>
+                    </div>
+                </section>
+
+            </main>
+      </form>
+
+</body>
+</html>

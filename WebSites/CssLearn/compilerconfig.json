@@ -1,0 +1,82 @@
+﻿[
+  {
+    "outputFile": "pulsing-sticks.css",
+    "inputFile": "pulsing-sticks.scss"
+  },
+  {
+    "outputFile": "SCss/machinery.css",
+    "inputFile": "SCss/machinery.scss"
+  },
+  {
+    "outputFile": "SCss/circle-border.css",
+    "inputFile": "SCss/circle-border.scss"
+  },
+  {
+    "outputFile": "SCss/circular-arc.css",
+    "inputFile": "SCss/circular-arc.scss"
+  },
+  {
+    "outputFile": "SCss/signal-sticks.css",
+    "inputFile": "SCss/signal-sticks.scss"
+  },
+  {
+    "outputFile": "SCss/tik-tok.css",
+    "inputFile": "SCss/tik-tok.scss"
+  },
+  {
+    "outputFile": "SCss/shinining-symbols.css",
+    "inputFile": "SCss/shinining-symbols.scss"
+  },
+  {
+    "outputFile": "SCss/sandglass.css",
+    "inputFile": "SCss/sandglass.scss"
+  },
+  {
+    "outputFile": "SCss/shining-symbols.css",
+    "inputFile": "SCss/shining-symbols.scss"
+  },
+  {
+    "outputFile": "SCss/vanishing-dots.css",
+    "inputFile": "SCss/vanishing-dots.scss"
+  },
+  {
+    "outputFile": "SCss/spinning-dots.css",
+    "inputFile": "SCss/spinning-dots.scss"
+  },
+  {
+    "outputFile": "SCss/spinning-awesome.css",
+    "inputFile": "SCss/spinning-awesome.scss"
+  },
+  {
+    "outputFile": "SCss/pulsing-sticks.css",
+    "inputFile": "SCss/pulsing-sticks.scss"
+  },
+  {
+    "outputFile": "SCss/unlocking.css",
+    "inputFile": "SCss/unlocking.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/voluming-sticks/voluming-sticks.css",
+    "inputFile": "Css/progress-bars/voluming-sticks/voluming-sticks.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/spinning-awesome/spinning-awesome.css",
+    "inputFile": "Css/progress-bars/spinning-awesome/spinning-awesome.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/circular-arc/circular-arc.css",
+    "inputFile": "Css/progress-bars/circular-arc/circular-arc.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/vanishing-dots/vanishing-dots.css",
+    "inputFile": "Css/progress-bars/vanishing-dots/vanishing-dots.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/shining-symbols/shining-symbols.css",
+    "inputFile": "Css/progress-bars/shining-symbols/shining-symbols.scss"
+  },
+  {
+    "outputFile": "Css/progress-bars/vanishing-spans/vanishing-spans.css",
+    "inputFile": "Css/progress-bars/vanishing-spans/vanishing-spans.scss"
+  }
+]

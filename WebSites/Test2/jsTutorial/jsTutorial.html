@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Tutorial</title>
+</head>
+<body>
+
+
+
+        <script type="text/javascript">
+            var index;
+            var int1,int2;
+             var x = 1;
+             document.write("Entering the loop<br /> ");
+
+             for (index = 0 ; index < 3; index++) {
+                 while (x < 20)
+                 {
+                    if (x == 5){
+                       break; // breaks out of loop completely
+                    }
+                    x = x + 1;
+                    document.write( x + "<br />");
+                }
+             }
+
+             for (int1 = 0; int1 < 5; int1++) {
+                 for (int2 = 0; int2 < 12; int2++) {
+                     document.write("int1 is " + int1 + " int2 is " + int2 + "<br />");
+                     if (int2 == 2) break;
+                 }
+             }
+
+             document.write("Exiting the loop!<br /> ");
+             //-->
+        </script>
+
+        <input type="button" onclick="sayHello()" value="Say Hello" />
+   
+
+</body>
+</html>

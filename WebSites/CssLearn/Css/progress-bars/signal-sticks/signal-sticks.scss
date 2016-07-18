@@ -1,0 +1,72 @@
+﻿$shape-size: 36px;                              // şeklin genişliğini belirler.
+$color-front: rgb(255, 255, 255);               // stick'in öne geldiği zamanki rengini belirler.
+$color-behind: rgba(255, 255, 255, 0.3);        // stick'in arkadayken rengini belirler.
+$signal-duration: 1s;                           // animasyon süresini belirler.
+
+$listOfParsers: ms webkit o moz;                // Browser uyumluluğu için kullanılan parserlar
+
+@mixin prefix($property,$value,$prefixes: () ) {
+    #{$property}: $value;
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property}: $value;
+    }   
+}
+
+@mixin frame($name){
+    @keyframes #{$name}{
+        50%{
+           background: $color-front;
+        }  
+    } 
+    @-ms-keyframes #{$name}{
+        50%{
+           background: $color-front;
+        }  
+    }
+    @-webkit-keyframes #{$name}{
+        50%{
+           background: $color-front;
+        }  
+    }
+    @-o-keyframes #{$name}{
+        50%{
+           background: $color-front;
+        }  
+    }
+    @-moz-keyframes #{$name}{
+        50%{
+           background: $color-front;
+        }  
+    }
+}
+
+@include frame(signal);
+
+.signal-sticks {
+  margin:auto;
+  position: relative;
+  width: ($shape-size / 4);
+  height: $shape-size;
+  background: $color-behind;
+  @include prefix(animation,signal $signal-duration infinite ($signal-duration / 3),$listOfParsers);
+  &:before, &:after {
+    content: '';
+    position: absolute;
+    display: block;
+    height: ($shape-size / 1.5);
+    width: ($shape-size / 4);
+    background: $color-behind;
+    bottom: 50%;
+    @include prefix(transform,translateY(50%),$listOfParsers);
+    @include prefix(animation,signal $signal-duration infinite, $listOfParsers); 
+  }
+  &:before {
+    left: -($shape-size / 2);
+  }
+  &:after {
+    left: ($shape-size / 2);
+    @include prefix(animation-delay,($signal-duration / 1.5),$listOfParsers);
+  }
+}
+
+

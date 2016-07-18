@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "css/registration.css",
+    "inputFile": "css/registration.scss"
+  },
+  {
+    "outputFile": "css/regTest.css",
+    "inputFile": "css/regTest.scss"
+  }
+]

@@ -1,0 +1,30 @@
+﻿    
+.not-valid-cross{
+    
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 9px;
+    height: 7px;
+    display:none;
+    
+}
+   
+.valid-tick{  
+    position: absolute;
+    top: 21px;
+    right: 20px;
+    width: 9px;
+    height: 7px;
+    display:none;
+    
+}
+.error-message{
+    display:none;
+}
+.backTrue{
+    background-color:forestgreen;
+}
+.backFalse{
+    background-color:palevioletred;
+}

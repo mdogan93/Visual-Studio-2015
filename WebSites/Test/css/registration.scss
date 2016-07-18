@@ -1,0 +1,140 @@
+﻿$color1: #ffffff;
+$color2: #808080;
+$color3: #000000;
+
+body {
+    background-color: $color2;
+}
+
+/*#region valuePart */
+input[type=text], input[type=password] {
+    border: 0.1vh groove #ff6a00;
+    border-radius: 1vh;
+    width: 240px;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+    outline: 0;
+    padding: 1px 1px 1px 8px;
+  
+}
+  
+input[type=text]:hover, input[type=password]:hover {
+    box-shadow: #ff6a00 0.1vh 0.1vh;
+}
+
+.segment-value {
+    float: left;
+    display: inline-block;
+    font-size:16px;
+}
+/*#endregion valuePart */
+
+
+.segment-label {
+    width: 240px;
+    display: inline-block;
+    float: left;
+    font-size: 24px;
+    padding-top:2.5px;
+    font-weight:700;
+    vertical-align:bottom;
+}
+
+
+.formContainer {
+    display: block;
+    
+}
+
+.regForm {
+    display: block;
+    width: 1050px;
+    margin: 0 auto;
+
+    .left-regForm {
+        display: block;
+        float: left;
+        border: 3px groove red;
+        width: 500px;
+    }
+
+    .right-regForm {
+        display: block;
+        float: left;
+        border: 3px groove black;
+        width: 500px;
+    }
+
+    div.segment {
+        overflow: hidden;
+        width: 480px;
+        float: left;
+        margin: 0.3vh auto;
+    }
+}
+
+.clear-left{
+    clear:left;
+}
+
+.clear-right{
+    clear:right;
+}
+
+.clear-both{
+    clear:both;
+}
+
+
+.radioButtonList {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+
+
+    label {
+        display: inline;
+    }
+}
+
+/*#region toolTip*/
+.info-tooltip{
+    position:relative;
+    display:block; 
+}
+
+.info-tooltip .tooltip-text{
+    visibility:hidden;
+    width:120px;
+    background-color:#dd2500;
+    color:black;
+    text-align:center;
+    border-radius:5px;
+    z-index:1;
+    box-shadow:0px 0px 4px 4px #505050;
+    position:absolute;
+    bottom:100%;
+    left:50%;
+    margin-left:-60px;
+    opacity:0;
+    transition:opacity 0.8s;
+
+}
+
+.info-tooltip .tooltip-text::after{
+    content:"\00a0 ";
+    position:absolute;
+    top:100%;
+    left:50%;
+    margin-left:-5px;
+    border-width:5px;
+    border-style:dotted;
+    border-color:#dd2000 transparent transparent transparent;
+}
+
+.info-tooltip:hover .tooltip-text{
+    visibility:visible;
+    opacity:1;
+}
+/*#endregion*/

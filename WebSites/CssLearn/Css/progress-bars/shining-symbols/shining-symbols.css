@@ -1,0 +1,47 @@
+﻿@-ms-keyframes pulse {
+  to {
+    -ms-transform: scale(0.75);
+    opacity: 0.6; } }
+
+@-webkit-keyframes pulse {
+  to {
+    -webkit-transform: scale(0.75);
+    opacity: 0.6; } }
+
+@-o-keyframes pulse {
+  to {
+    -o-transform: scale(0.75);
+    opacity: 0.6; } }
+
+@-moz-keyframes pulse {
+  to {
+    -moz-transform: scale(0.75);
+    opacity: 0.6; } }
+
+@keyframes pulse {
+  to {
+    -moz-transform: scale(0.75);
+    opacity: 0.6; } }
+
+.shining-symbols {
+  color: #fff;
+  font-family: Consolas, Menlo, Monaco, monospace;
+  font-weight: bold;
+  font-size: 30px;
+  opacity: 0.8;
+  text-align: center; }
+  .shining-symbols span {
+    display: inline-block;
+    -ms-animation: pulse 0.4s alternate infinite ease-in-out;
+    -webkit-animation: pulse 0.4s alternate infinite ease-in-out;
+    -o-animation: pulse 0.4s alternate infinite ease-in-out;
+    -moz-animation: pulse 0.4s alternate infinite ease-in-out;
+    animation: pulse 0.4s alternate infinite ease-in-out; }
+    .shining-symbols span:nth-child(odd) {
+      color: #fff;
+      -ms-animation-delay: 0.4s;
+      -webkit-animation-delay: 0.4s;
+      -o-animation-delay: 0.4s;
+      -moz-animation-delay: 0.4s;
+      animation-delay: 0.4s; }
+

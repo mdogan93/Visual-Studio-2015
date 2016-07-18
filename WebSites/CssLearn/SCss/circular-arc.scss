@@ -1,0 +1,92 @@
+﻿$diameter: 25px;                            //Çemberin çapını belirler (Kare ya da Eliptik şekilde taban uzunluğunu belirler)
+$top-arc-color: rgb(255,255,255);           //Çemberin üst tarafındaki yayın rengini belirler.
+$bottom-arc-color: rgba(255,255,255, 0.2);  //Çemberin alt tarafındaki yayın rengini belirler.
+$rest: rgba(255,255,255, 0.2);              //Çemberin kalan kısımlarının rengini belirler.
+$border-width:.25rem;                       //Borderın kalınlığını belirler
+$border-style:groove;                        //Borderın görünümünü belirler
+$border-horizontal-radius:50%;              //Yatay curve'un derecesini belirler (0 kare, 50 ve üzeri çember)
+$border-vertical-radius:50%;                //Dikey curve'un derecesini belirler (0 kare, 50 ve üzeri çember)
+$animation-duration:1s;                     //Animasyon süresini belirler.
+$rotation-angle-start:0deg;                 //Animasyonun başlangıç açısını belirler.
+$rotation-angle-finish:360deg;              //Animasyonun bitiş açısını belirler.
+
+$listOfParsers: ms webkit o moz;            //Used for browser compatibility
+
+// @param {String} $property - Property name
+// @param {*} $value - Property value
+
+@mixin prefix($property,$value,$prefixes: () ) {
+    #{$property}: $value;
+    @each $prefix in $prefixes{
+        #{'-' + $prefix + '-' + $property}: $value;
+    }   
+}
+
+@mixin frame($name,$property,$value1,$value2){
+    @keyframes #{$name}{
+        0%{
+            transform: $property +'('+$value1+')'
+        }
+        100%{
+            transform: $property +'('+$value2+')'
+        }
+    } 
+    @-ms-keyframes #{$name}{
+        0%{
+            -ms-transform: $property +'('+$value1+')'
+        }
+        100%{
+            -ms-transform: $property +'('+$value2+')'
+        }
+    }
+    @-webkit-keyframes #{$name}{
+        0%{
+            -webkit-transform: $property +'('+$value1+')'
+        }
+        100%{
+            -webkit-transform: $property +'('+$value2+')'
+        }
+    }
+
+    @-o-keyframes #{$name}{
+        0%{
+            -o-transform: $property +'('+$value1+')'
+        }
+        100%{
+            -o-transform: $property +'('+$value2+')'
+        }
+    }
+    @-moz-keyframes #{$name}{
+        0%{
+            -moz-transform: $property +'('+$value1+')'
+        }
+        100%{
+            -moz-transform: $property +'('+$value2+')'
+        }
+    }
+}
+
+
+@include frame(spin,rotate,0deg,360deg);
+
+.circular-arc {
+    position:relative;
+    border-radius: $border-horizontal-radius $border-vertical-radius;
+    margin:auto ;
+    width: $diameter;
+    height: $diameter;
+    border: $border-width $border-style $rest;
+    border-top-color: $top-arc-color;
+    border-bottom-color:$bottom-arc-color;
+    //animation: spin $animation-duration infinite ease-in-out;
+    @include prefix(animation,spin $animation-duration infinite linear, $listOfParsers);
+    @if($rotation-angle-finish - $rotation-angle-start <360){
+        animation-direction:alternate;
+    }
+
+}
+
+
+
+
+

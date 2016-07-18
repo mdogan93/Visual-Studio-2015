@@ -1,0 +1,155 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+    <link rel="stylesheet" href="Css/_homePage.css">
+    <link rel="stylesheet" href="Css/progress-bars/circular-arc/circular-arc.css">
+    <link rel="stylesheet" href="Css/progress-bars/spinning-awesome/spinning-awesome.css">
+    <link rel="stylesheet" href="Css/progress-bars/voluming-sticks/voluming-sticks.css">
+    <link rel="stylesheet" href="Css/progress-bars/shining-symbols/shining-symbols.css">
+    <link rel="stylesheet" href="Css/progress-bars/signal-sticks/signal-sticks.css">
+    <link rel="stylesheet" href="Css/progress-bars/vanishing-dots/vanishing-dots.css">
+    <link rel="stylesheet" href="Css/progress-bars/vanishing-spans/vanishing-spans.css">
+    <script src="js/jquery-3.0.0.min.js"></script>
+    <script src="js/fireBar.js"></script>
+
+    <script>
+        $(document).ready(function(){
+            //Gets TITLE AND ARTIST NAME
+            $("#formA").submit(function (event) {
+                $form = $(this);
+                var arr = {
+                    "name": $form.find("input[name = 'name']").val(),
+                    "city": $form.find("input[name = 'surname']").val(),
+                    //Loading Bar related to Ajax Request
+                    "pluginName": 'topGroup'
+                };
+              
+                $.ajax({
+                    type: 'POST',
+                    url: 'demo_test_post.aspx',
+                    data: JSON.stringify(arr),
+                    success: function (data, status) { alert("...return..."); }
+                });
+            });
+
+            //endeach
+            //$("[data-fireBar-url='" + settings.url + "']").show();
+            //"[data-fireBar-url='url']"
+
+            $("#topRightButton").click(function () {
+                var arr= {
+                    "pluginName": 'topGroup'
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'demo_test_post.aspx',
+                    data: JSON.stringify(arr),
+                    success: function (data, status) { alert("...return..."); }
+                });
+                
+            });
+            //$("#centerButton").click(function () {
+            //    $('input[data-fireBar-url="testAja.xml"]').each(function () {
+            //        alert($(this).attr("value"));
+            //    });
+            //});
+            $("#bottomLeftButton").click(function () {
+                var arr = {
+                    "pluginName": 'bottomGroup'
+                };
+                $.ajax({
+                    type: 'POST',
+                    url: 'demo_test_post.aspx',
+                    data: JSON.stringify(arr),
+                    success: function (data, status) { alert("...return..."); }
+                });
+            });
+            $("#bottomRightButton").click(function () {
+                var arr = {
+                    "pluginName": 'bottomGroup'
+                }
+                $.ajax({
+                    type: 'POST',
+                    url: 'demo_test_post.aspx',
+                    data: JSON.stringify(arr),
+                    success: function (data, status) { alert("...return..."); }
+                });
+            });
+
+        });
+    </script>
+
+</head>
+<body>
+    <div>
+        <div class="front-content bottom-right-radius">
+            <form name="formA" id="formA" >
+                NAME: <input type="text" name="name" /> <br />
+                SURNAME: <input type="text" name="surname" /> <br />
+                <input type="submit" id="topLeftButton" value="Top Left">
+            </form>
+            <div id="topLeft">
+
+                <div data-pluginName="topGroup" id="topLeftLoad" style="display:none; width:100%; height:60px">
+                    <div class="vanishing-spans">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+
+                </div>
+                <div id="titleArtist" style="width:75%; height:20vh;overflow:auto;padding:0.5vh 15vh 5vh  0.5vh"></div>
+            </div>
+        </div>
+
+        <div class="front-content bottom-left-radius">
+            <h1 style="text-align:center">Top Right</h1>
+            <p style="text-align:center"> TOP-RIGHT LOADING BAR  </p>
+            <div id="topRight">
+                <input type="button" id="topRightButton" value="Top Right">
+                <div data-pluginName="topGroup" id="topRightLoad" style="display:none; width:100%; height:60px">
+                    <div class="circular-arc"></div>
+                </div>
+                <!--<div id="topRightLoad" class="hidden" data-fireBar-url="Ajax.aspx/sss.xxx" style="width:100%; height:60px">
+                    <div class="circular-arc"></div>
+                </div>-->
+                <div id="compCountry" style="width:75%; height:20vh;overflow:auto; padding:0.5vh 15vh 5vh  0.5vh"></div>
+            </div>
+        </div>
+        <div class="all-alert">
+            <input type="button" id="centerButton"  value="Click!">
+        </div>
+
+        <div class="front-content top-right-radius">
+            <h1 style="text-align:center">Bottom Left</h1>
+            <p style="text-align:center">BOTTOM-LEFT LOADING BAR  </p>
+            <div id="bottomLeft">
+                <input type="button" id="bottomLeftButton" value="Bottom Left">
+                <div data-pluginName="bottomGroup" id="bottomLeftLoad"  style="display:none; width:100%; height:60px">
+                    <div class="spinning-awesome"></div>
+                </div>
+                <div id="titlePrice" style="width:75%; height:20vh;overflow:auto;padding:0.5vh 15vh 5vh  0.5vh"></div>
+            </div>
+        </div>
+
+        <div class="front-content top-left-radius">
+            <h1 style="text-align:center">Bottom Right</h1>
+            <p style="text-align:center"> BOTTOM-RIGHT LOADING BAR  </p>
+            <div id="bottomRight">
+                <input type="button" id="bottomRightButton" value="Bottom Right">
+                <div data-pluginName="bottomGroup" id="bottomRightLoad" style="display:none; width:100%; height:60px">
+                    <div class="shining-symbols">
+                        <span>{</span><span>}</span>
+                    </div>
+                </div>
+                <div id="titleArtistYear" style="width:75%; height:20vh;overflow:auto;padding:0.5vh 15vh 5vh  0.5vh"></div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+</html>
