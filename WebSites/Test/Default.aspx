@@ -9,7 +9,7 @@
 <body>
 <form id="form1" runat="server">
     <div>
-      TextBox
+      TextBox - Group 1     
       <asp:TextBox ID="TextBox1" ValidationGroup="Group1" runat="server"></asp:TextBox>
       <asp:RequiredFieldValidator Display="Static" ID="TextBoxValidator1" ValidationGroup="Group1" runat="server" ControlToValidate="TextBox1" ErrorMessage="(please enter some text)" EnableClientScript="False"></asp:RequiredFieldValidator>
       <br />

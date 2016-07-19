@@ -1,0 +1,139 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+   
+    <title></title>
+	<meta charset="utf-8" />
+    <script src="Js/jquery-3.0.0.min.js"></script>
+    <link rel="stylesheet" href="Css/understandThis.css" />
+    <script >
+        //var link = document.getElementById("myId");
+        //link.addEventListener("click", function () {
+        //    console.log(this); //points to link
+        //}, false);
+      
+        function clickMe() {
+            function foo() {
+                console.log(this); //global object
+            };
+            foo();
+
+            myapp = {"prop1": "val1" , "prop2" : "val2"};
+            myapp.foo = function () {
+                console.log(this); //points to myapp object
+            }
+            myapp.foo();
+        }
+    </script>
+
+    <script>
+        var name = 'globe';
+        var myFunction = function () {
+            var name = 'level1';
+            var myFuncLevel2 = function () {
+                console.log(name+" inner");
+            };
+            console.log(name+" outer");
+            myFuncLevel2(); //output is "level1 inner"
+        };
+         
+        //myFunction.call(this);//this is "window" output is "level1 outer"
+        //console.log(name);//globe
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            var nav = document.querySelector('.nav'); // <nav class="nav">
+            var toggleNav = function () {
+                console.log(this); // <nav> element
+                var _this = this; // to store this value for later call
+                setTimeout(function () {
+                    console.log(_this); // [object Window]
+                }, 5000);
+            };
+            nav.addEventListener('click', toggleNav, false);
+        });
+    </script>
+
+    <script>
+        var sayHello = (function (name) {
+            var text = 'Hello, ' + name;
+            return function () {
+                console.log(text);
+                
+            };
+        })("roro");
+        //sayHello(); // call for self invoking function
+        //sayHello('Todd')(); call for non-self-invoking
+    </script>
+    <script>
+        $(document).ready(function () {
+            var links = document.querySelectorAll('ul li');
+            for (var i = 0; i < links.length; i++) {
+                (function () {
+                    console.log(this);
+                }).call(links[i]);
+            }
+        })
+         
+    </script>
+
+    <script>
+        var Module = (function () {
+            var myModule = {};
+            var privateMethod = function () {
+                alert("private");
+            };
+            myModule.publicMethod = function () {
+                alert("public method 1")
+            };
+            myModule.anotherPublicMethod = function () {
+                alert("public method 2")
+            };
+            return myModule; // returns the Object with public methods
+        })();
+
+        // Module.publicMethod();  // call for public method
+    </script>
+
+    <script>
+        function myModule() {
+            var name = "tim", age = 28;
+            return function greet() {
+                return "Hello " + name + ".  Wow, you are " + age + " years old.";
+            }
+        }
+        
+        var greeter = myModule();   // call `myModule` to get a closure out of it.
+        alert(greeter());           // Call the closure
+
+        //alert(myModule()());      // another option to call the closure
+    </script>
+    <script>
+        var person = {
+            firstName   :"Penelope",
+            lastName    :"Barrymore",
+            showFullName:function() {
+                console.log(this.firstName + " " + this.lastName);
+            }
+        };
+        person.showFullName(); // Penelope Barrymore
+        var anotherPerson = {
+            firstName: "mary",
+            lastName:"gary"
+        }
+        person.showFullName.apply(anotherPerson);
+    </script>
+</head>
+<body>
+    <button class="myId" onclick="clickMe()">link</button>
+    <nav class="nav" >Boom!
+        <ul>
+            <li>item no 1  </li>
+            <li>item no 2  </li>
+            <li>item no 3  </li>
+        </ul>
+        
+    </nav>
+</body>
+</html>
