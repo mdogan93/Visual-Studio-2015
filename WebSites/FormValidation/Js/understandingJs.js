@@ -148,7 +148,7 @@ var user = {
         console.log(this.data[randomNum].name + " " + this.data[randomNum].age );
     }
 }
-user.showData(); // call for the global scope 
+//user.showData(); // call for the global scope 
 //user.showData.call(user); // call for the local "user" scope
 //user.showData.bind(user)(); // call after binding "user" scope  
 
@@ -175,13 +175,13 @@ user.showData(); // call for the global scope
 
     // zack is now linked to alien
     // it 'inherits' the properties of alien
-    console.log(zack.kind); //=> ‘alien’
+    //console.log(zack.kind); //=> ‘alien’
 
     // assign person as the prototype of zack
     zack.__proto__ = person
 
     // and now zack is linked to person
-    console.log(zack.kind); //=> ‘person’
+    //console.log(zack.kind); //=> ‘person’
 
     /*
 
@@ -210,6 +210,78 @@ user.showData(); // call for the global scope
         this.color = color;
     }
 
-alert((new Vehicle("tan")).color);   // "tan"
+//alert((new Vehicle("tan")).color);   // "tan"
 
 }
+
+/*
+        CallBack function
+*/
+
+var allUserData = [];
+
+//function logStuff(userData){
+//    if( typeof userData === "string"){
+//        console.log(userData);
+//    }
+//    else if( typeof userData === "object"){
+//        for(var item in userData){
+//            console.log(item + ": " + userData[item]);
+//        }
+//    }
+//}
+//function getInput(options,callback){
+//    allUserData.push(options);
+//    callback(options);
+//}
+//getInput({
+//    name: "Rich",
+//    speciality: "js"
+//}, logStuff);
+
+//console.log(allUserData);
+
+function getInput(options) {
+    allUserData.push(options,
+     (function(){
+         for (var item in options) {
+             console.log(item + " : " + options[item]);
+         }
+
+     })());
+}
+
+
+getInput({
+    name: "Rich",
+    speciality: "js"
+});
+
+
+function some_function2(url, callback) {
+    var httpRequest; // create our XMLHttpRequest object
+    if (window.XMLHttpRequest) {
+        httpRequest = new XMLHttpRequest();
+    } else if (window.ActiveXObject) {
+        // Internet Explorer is stupid
+        httpRequest = new
+			ActiveXObject("Microsoft.XMLHTTP");
+    }
+
+    httpRequest.onreadystatechange = function() {
+        // inline function to check the status
+        // of our request
+        // this is called on every state change
+        if (httpRequest.readyState === 4 && httpRequest.status === 200) {
+            callback.call(httpRequest.responseXML);
+            // call the callback function
+        }
+    };
+    httpRequest.open('GET', url);
+    httpRequest.send();
+}
+// call the function
+some_function2("../note.xml", function () {
+    console.log(this);
+});
+console.log("this will run before the above callback");
