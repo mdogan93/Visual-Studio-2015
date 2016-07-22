@@ -1,0 +1,10 @@
+﻿[
+  {
+    "outputFile": "Scss/common.css",
+    "inputFile": "Scss/common.scss"
+  },
+  {
+    "outputFile": "Scss/HomePage.css",
+    "inputFile": "Scss/HomePage.scss"
+  }
+]
