@@ -1,25 +1,38 @@
-﻿.header-container {
+﻿body {
+  background: linear-gradient(to bottom, #fff, #eee);
+  font: 12px Helvetica;
+  color: #909090; }
+
+.header-container {
   position: absolute;
   width: 100%;
   background-color: #505050;
   height: 34px;
-  padding: 8px;
+  padding: 8px 0px;
   top: 0;
   left: 0; }
 
+.header-wrapper {
+  width: 1000px;
+  margin: 0 auto;
+  height: 34px;
+  border: 3px red solid; }
+
+/*#region Header Logo */
 .logo-header {
   float: left;
   width: 200px;
   height: 34px;
-  margin-left: 224px;
   background-image: url("../gallery/main-logo-in-letters.jpg");
   background-size: contain;
   background-repeat: no-repeat; }
 
+/*#endregion */
+/*#region Search */
 .search-opt {
   float: left;
-  margin-left: 75px;
-  width: 480px; }
+  margin-left: 95px;
+  width: 400px; }
 
 .search-quick {
   position: relative;
@@ -33,7 +46,7 @@
     width: 280px;
     color: #aaaaaa;
     height: 34px;
-    font-size: 12px;
+    font: 12px helvetica;
     outline: none;
     padding-left: 12px; }
     .search-quick input[type=text]:focus {
@@ -59,11 +72,169 @@
   .button-detail-search a {
     text-decoration: none;
     color: #ddd;
-    display: block; }
+    display: block;
+    font: 12px helvetica; }
 
+/*#endregion Search */
+/*#region UserPanel */
+.headerUserPanel {
+  float: right;
+  margin-top: -4px;
+  width: 240px;
+  height: 34px;
+  padding-top: 10px;
+  font: 12px helvetica;
+  color: #aaaaaa; }
+
+.log, .sign {
+  padding: 4px;
+  float: right;
+  border-right: 2px groove black;
+  cursor: pointer; }
+
+.log {
+  width: 50px; }
+
+.sign {
+  width: 40px; }
+
+.adButton {
+  padding-left: 8px;
+  margin-top: -4px;
+  float: right;
+  width: 120px; }
+  .adButton button {
+    height: 30px;
+    outline: none;
+    border-radius: 3px;
+    border: 0;
+    font: bold 12px Helvetica;
+    color: white;
+    background-color: #00aaff;
+    cursor: pointer; }
+
+/*#endregion User Panel */
+/*#region Main*/
 .content-wrapper {
   width: 1000px;
   color: cadetblue;
+  margin: 0 auto;
   height: 1200px;
+  padding: 80px 10px 10px 0px;
   border: 3px solid red; }
+
+/*#endregion*/
+/*#region Footer*/
+.footer {
+  position: absolute;
+  clear: both;
+  width: 100%;
+  background-color: white;
+  height: 350px;
+  left: 0;
+  padding: 0;
+  margin: 0; }
+
+.footer-content {
+  width: 1000px;
+  margin: 0 auto;
+  height: 320px;
+  padding: 25px 30px 0px 30px; }
+
+.footerTable {
+  width: 100%;
+  height: 160px; }
+  .footerTable table {
+    width: 100%; }
+    .footerTable table th {
+      text-align: left;
+      color: #505050;
+      padding: 0px; }
+    .footerTable table td {
+      font: 12px Helvetica;
+      color: #999999;
+      padding: 4px 0px 0px 0px; }
+      .footerTable table td i {
+        padding: 0px 2px; }
+
+.contact {
+  width: 100%;
+  height: 60px; }
+  .contact .contactLeft {
+    float: left;
+    width: 450px;
+    height: 100%; }
+    .contact .contactLeft .perItem {
+      float: left;
+      width: 200px;
+      padding-top: 10px;
+      height: 100%; }
+      .contact .contactLeft .perItem .taskImage {
+        float: left;
+        width: 30px;
+        height: 30px;
+        border-radius: 50%;
+        border: 1px solid #505050;
+        text-align: center;
+        padding-top: 5px;
+        font-size: 20px;
+        color: #7b0000;
+        background-color: rgba(120, 0, 0, 0.05); }
+      .contact .contactLeft .perItem .info-table {
+        float: left; }
+        .contact .contactLeft .perItem .info-table table {
+          width: 150px; }
+          .contact .contactLeft .perItem .info-table table th {
+            text-align: left;
+            font: bold 12px Helvetica;
+            color: #980f0f; }
+          .contact .contactLeft .perItem .info-table table td {
+            color: #505050;
+            font: bold 12px Helvetica; }
+  .contact .contactRight {
+    float: right;
+    width: 240px;
+    height: 100%; }
+    .contact .contactRight .appPlayStore {
+      float: right;
+      width: 100px;
+      height: 100%;
+      padding-top: 10px;
+      padding-left: 10px; }
+      .contact .contactRight .appPlayStore img {
+        border-radius: 5px;
+        width: 100%;
+        height: 34px;
+        object-fit: fill; }
+
+.warning {
+  width: 100%;
+  height: 45px;
+  border: 1px dashed #aaa;
+  font: 12px Helvetica;
+  color: #505050;
+  padding: 3px 0px 3px 3px; }
+
+.copyRight {
+  float: left;
+  width: 100%;
+  height: 30px;
+  padding-top: 5px; }
+  .copyRight .colmn-left {
+    padding-top: 4px;
+    float: left;
+    width: 300px;
+    height: 30px; }
+  .copyRight .colmn-right {
+    padding-top: 4px;
+    float: right;
+    width: 280px;
+    height: 30px; }
+    .copyRight .colmn-right a {
+      border-left: 1px solid #505050;
+      padding-left: 10px;
+      margin-left: 10px;
+      float: right; }
+
+/*#endregion*/
 
