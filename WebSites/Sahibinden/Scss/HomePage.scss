@@ -1,35 +1,37 @@
-﻿$header-height: 34px;
+﻿$header-height: 32px;
 $bgColor: #505050;
+$titleBgColor: rgba(10,55,155,0.03);
+$divBorder: 1px solid #ccc;
+$linkColor:rgb(7, 15, 172);
 
 body {
-    background: linear-gradient(to bottom,#fff,#eee);
-    font:12px Helvetica;
-    color:#909090
+    font: 12px Helvetica;
+    color: #909090;
 }
 
-
+/*#region header*/
 .header-container {
     position: absolute;
     width: 100%;
     background-color: $bgColor;
     height: $header-height;
-    padding:8px 0px;
+    padding: 8px 0px;
     top: 0;
     left: 0;
 }
-.header-wrapper{
-    width:1000px;
-    margin:0 auto;
-    height:$header-height;
-    border:3px red solid;
 
+.header-wrapper {
+    width: 980px;
+    margin: 0 auto;
+    height: $header-height;
 }
 
 /*#region Header Logo */
 .logo-header {
     float: left;
-    width: 200px;
+    width: 240px;
     height: $header-height;
+    margin-left: 40px;
     background-image: url('../gallery/main-logo-in-letters.jpg');
     background-size: contain;
     background-repeat: no-repeat;
@@ -39,7 +41,6 @@ body {
 /*#region Search */
 .search-opt {
     float: left;
-    margin-left: 95px;
     width: 400px;
 }
 
@@ -54,10 +55,10 @@ body {
         border: 0;
         background-color: inherit;
         border-radius: inherit;
-        width: 280px;
+        width: 220px;
         color: #aaaaaa;
         height: $header-height;
-        font: 12px helvetica;
+        font: 10px helvetica;
         outline: none;
         padding-left: 12px;
 
@@ -91,7 +92,7 @@ body {
         text-decoration: none;
         color: #ddd;
         display: block;
-        font: 12px helvetica;
+        font: 10px helvetica;
     }
 }
 /*#endregion Search */
@@ -103,7 +104,7 @@ body {
     width: 240px;
     height: $header-height;
     padding-top: 10px;
-    font: 12px helvetica;
+    font: 10px helvetica;
     color: #aaaaaa;
 }
 
@@ -129,11 +130,11 @@ body {
     width: 120px;
 
     button {
-        height: 30px;
+        height: 25px;
         outline: none;
         border-radius: 3px;
         border: 0;
-        font: bold 12px Helvetica;
+        font: bold 10px Helvetica;
         color: white;
         background-color: #00aaff;
         cursor: pointer;
@@ -142,39 +143,441 @@ body {
 
 /*#endregion User Panel */
 
+/*#endregion*/
 
 /*#region Main*/
 .content-wrapper {
-    width: 1000px;
-    color: cadetblue;
+    width: 910px;
     margin: 0 auto;
-    height: 1200px;
-    padding: 80px 10px 10px 0px;
-    border: 3px solid red;
+    padding-top: 40px;
+    margin-bottom:20px;
 }
 
-/*#endregion*/
+.mainContent {
+    float: left;
+    width: 670px;
+    margin-left: 10px;
+    margin-top: 10px;
+}
+
+.headBanner-wrapper {
+    float: left;
+    width: 100%;
+    height: 210px;
+
+    .bannerItem1 {
+        float: left;
+        width: 400px;
+        height: 100%;
+        border: $divBorder;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    .bannerItem2 {
+        border: $divBorder;
+        float: right;
+        width: 260px;
+        height: 100%;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+}
+
+.horizontalBanner {
+    float: left;
+    width: 100%;
+    height: 70px;
+    border: $divBorder;
+    margin-top: 10px;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+    }
+}
+
+.frontItemList {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+}
+
+.frontItem {
+    float: left;
+    width: 100px;
+    height: 100px;
+    margin: 10px 0px 0px 10px;
+    text-align: center;
+
+
+    img {
+        box-sizing: border-box;
+        width: 100%;
+        height: 80px;
+        object-fit: contain;
+        border: $divBorder;
+    }
+
+    a{
+        overflow:hidden;
+        text-overflow:ellipsis;
+        white-space: nowrap;
+        width:80px;
+        float:left;
+        font:12px Helvetica;
+        margin:0 10px;
+        color:$linkColor;
+        &:hover{
+            text-decoration:underline;
+        }
+     }
+
+    
+       
+}
+
+.projectExamples {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+
+    .eachItem{
+        width:300px;
+        margin:15px;
+        float:left;
+
+        img{
+            width:100%;
+            height:140px;
+            object-fit:fill;
+        }
+        .subText{
+
+            p:first-child{
+                font-size:14px;
+                font-weight:700;
+
+                               
+            }
+            p{
+                font:12px;
+                color:$bgColor;
+                span{
+                     font-weight:700;
+                }
+            }
+            
+        }
+
+       
+    }
+}
+
+
+.dailyChance {
+    margin-top:10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+    padding:0;
+
+    .eachItem:last-child{
+        border:0;
+        margin-right:0px;
+    }
+     
+           
+    .eachItem{
+        position:relative;
+        margin:0px 5px 0px 0px;
+        float:left;
+        padding:5px 0px;
+        width:219px;
+        border-right: $divBorder;
+        text-align:center;
+        .discount{
+            position:absolute;
+            top:0;
+            right:5px;
+
+            .box{
+                float:left;   
+                width:50px;
+                height:40px;
+                background:red;
+
+            }
+
+            .box-bottom{
+                float:left;
+                width:0px;
+                height:0px;
+                border-width:25px;
+                border-color:red transparent transparent transparent;
+                border-style:solid;
+                transform:scaleY(0.4);
+                margin-top:-15px;
+            }
+        }
+        img{
+            margin: 30px 40px;
+            width:120px;
+            height:100px;
+            object-fit:fill;
+        }
+        a{
+            color:$linkColor;
+            font:12px Helvetica;
+            width:150px;
+            margin:0px 5px;
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+        span{
+           float:left;
+           color:indianred;
+           font-size:20px;
+           sup{
+               vertical-align:super;
+               font-size:60%;
+           }
+        }
+    }
+}
+
+.weirdAds {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+}
+
+.popularItems {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+    .eachItem{
+        float:left;
+        width:150px;
+        text-align:center;
+        margin:10px 0px 5px 15px;
+        img{
+            object-fit:contain;
+            width:100%;
+            height:100px;
+        }
+        a{
+            color:$linkColor;
+            font:12px Helvetica;
+            width:150px;
+
+        }
+        a:hover{
+            text-decoration:underline;
+        }
+    }
+}
+
+.mostSearch {
+    margin-top: 10px;
+    float: left;
+    width: 100%;
+    border: $divBorder;
+
+
+    ul {
+        margin: 0;
+        padding: 0;
+        list-style-type: none;
+
+        li:nth-child(4n) {
+            border: 0;
+        }
+
+        li {
+            width: 155px;
+            float: left;
+            padding: 6px 0px;
+            border-right: $divBorder;
+            margin: 0px 0px 0px 10px;
+
+            a {
+                text-decoration: none;
+                font: 11px Helvetica;
+                color: $bgColor;
+            }
+
+            a:hover {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    li::before {
+        display: inline-block;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        content: " ";
+        margin: 0 10px 0 0;
+        background: black;
+    }
+}
+
+/*#region LeftBar*/
+.leftBar {
+    float: left;
+    width: 230px;
+    margin-top: 10px;
+}
+
+.category-wrapper {
+    width: 100%;
+    border: $divBorder;
+    padding-bottom: 5px;
+}
+
+.bestForYou-wrapper {
+    width: 100%;
+    border: $divBorder;
+    margin-top: 10px;
+    padding-bottom: 5px;
+}
+
+.news-wrapper {
+    width: 100%;
+    border: $divBorder;
+    margin-top: 10px;
+    padding-bottom: 5px;
+
+    p {
+        padding: 5px;
+        color: $linkColor;
+        font-weight: 700;
+    }
+}
+
+.subCat {
+    clear: left;
+    width: 100%;
+    padding: 5px 0px;
+
+    .iconItem {
+        float: left;
+        height: 15px;
+        width: 15px;
+        border: 0;
+        margin: 0px 5px;
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: fill;
+        }
+    }
+
+    a {
+        text-decoration: none;
+        font: 13px Helvetica;
+        color: $linkColor;
+        float: left;
+        width: 180px;
+
+        span {
+            color: #505050;
+            font: 10px Helvetica;
+        }
+
+        img {
+            height: 15px;
+            width: 15px;
+            object-fit: fill;
+        }
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    a.bold {
+        font-weight: 700;
+    }
+}
+/*#endregion */
+
+
+.categoryTitle {
+    float: left;
+    padding: 2px 0px 2px 8px;
+    box-sizing: border-box;
+    width: 100%;
+    font: 14px Helvetica;
+    font-weight: 800;
+    color: $bgColor;
+    background-color: $titleBgColor;
+    border-bottom: $divBorder;
+
+    a {
+        float: right;
+        text-decoration: none;
+        color: $linkColor;
+        font-weight: 500;
+        font-size: 12px;
+        margin-right: 5px;
+        padding-top: 4px;
+    }
+}
+
+hr.separator {
+    clear: both;
+    height: 1px;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #fff;
+    margin: 18px 15px 0px 15px;
+}
+
+hr.projectSeparator {
+    clear: both;
+    height: 1px;
+    border-top: 1px dashed #ccc;
+    border-bottom: 1px dashed #fff;
+
+}
+
+
+
+/*#endregion Main*/
 
 
 /*#region Footer*/
 
 .footer {
-    position: absolute;
-    clear: both;
+    float:left;
     width: 100%;
     background-color: white;
     height: 350px;
-    left: 0;
-    padding: 0;
-    margin: 0;
+    box-shadow: $titleBgColor 0px -10px 200px 80px;
 }
 
 .footer-content {
-    width: 1000px;
+    width: 910px;
     margin: 0 auto;
     height: 320px;
     padding: 25px 30px 0px 30px;
-
 }
 
 .footerTable {
@@ -204,15 +607,17 @@ body {
 
 .contact {
     width: 100%;
-    height: 60px;
+    height: 50px;
+    margin-bottom: 20px;
+
     .contactLeft {
         float: left;
-        width: 450px;
+        width: 500px;
         height: 100%;
 
         .perItem {
             float: left;
-            width: 200px;
+            width: 240px;
             padding-top: 10px;
             height: 100%;
 
@@ -222,12 +627,11 @@ body {
                 height: 30px;
                 border-radius: 50%;
                 border: 1px solid $bgColor;
-                text-align:center;
-                padding-top:5px;
-                font-size:20px;
-                color:rgb(123,0,0);
-                background-color:rgba(120,0,0,0.05);       
-               
+                text-align: center;
+                padding-top: 5px;
+                font-size: 20px;
+                color: rgb(123,0,0);
+                background-color: rgba(120,0,0,0.05);
             }
 
             .info-table {
@@ -255,11 +659,11 @@ body {
         float: right;
         width: 240px;
         height: 100%;
-        
+
 
         .appPlayStore {
             float: right;
-            width: 100px;
+            width: 80px;
             height: 100%;
             padding-top: 10px;
             padding-left: 10px;
@@ -280,35 +684,34 @@ body {
     border: 1px dashed #aaa;
     font: 12px Helvetica;
     color: $bgColor;
-    padding: 3px 0px 3px 3px ;
+    padding: 3px 0px 3px 3px;
 }
 
 .copyRight {
-    float:left;
+    float: left;
     width: 100%;
     height: 30px;
-    padding-top:5px;
-  
+    padding-top: 5px;
+
     .colmn-left {
-        padding-top:4px;
+        padding-top: 4px;
         float: left;
         width: 300px;
         height: 30px;
-
     }
 
     .colmn-right {
-        padding-top:4px;
+        padding-top: 4px;
         float: right;
         width: 280px;
         height: 30px;
-    
-        
-        a{
-            border-left:1px solid $bgColor;
-            padding-left:10px;
-            margin-left:10px;
-            float:right;
+
+
+        a {
+            border-left: 1px solid $bgColor;
+            padding-left: 10px;
+            margin-left: 10px;
+            float: right;
         }
     }
 }

@@ -2,6 +2,7 @@
 <html>
 <head>
     <link rel="icon" href="favicon.ico" />
+    <link rel="stylesheet" href="Scss/reset.css" />
     <link rel="stylesheet" href="Scss/common.css" />
     <link rel="stylesheet" href="Scss/HomePage.css" />
     <script src="https://use.fontawesome.com/cd89118073.js"></script>
@@ -9,189 +10,531 @@
     <meta charset="utf-8" />
 </head>
 <body>
-    <form>  
-            <div class="header-container">
-                <div class="header-wrapper">
-                    <div class="logo-header">
+    <form>
+        <div class="header-container">
+            <div class="header-wrapper">
+                <div class="logo-header">
+                </div>
 
+                <div class="search-opt">
+
+                    <div class="search-quick">
+                        <input type="text" placeholder="Kelime,ilan no veya mağaza adı ile ara" />
+                        <input type="button" class="close-icon" />
                     </div>
+                    <!-- .search-quick Ends -->
 
-                    <div class="search-opt">
-
-                        <div class="search-quick">
-                            <input type="text" placeholder="Kelime,ilan no veya mağaza adı ile arama" />
-                            <input type="button" class="close-icon" />
-                        </div>
-                        <!-- .search-quick Ends -->
-
-                        <div class="button-detail-search">
-                            <a href="#">Detaylı Arama</a>
-                        </div>
+                    <div class="button-detail-search">
+                        <a href="#">Detaylı Arama</a>
                     </div>
+                </div>
 
-                    <div class=headerUserPanel>
-                        <div class="adButton">
-                            <button>
-                                Ücretsiz* İlan ver
-                            </button>
-                        </div>
-                        <div class="sign">
-                            Üye Ol
-                        </div>
-                        <div class="log">
-                            Giriş Yap
-                        </div>
+                <div class=headerUserPanel>
+                    <div class="adButton">
+                        <button>
+                            Ücretsiz* İlan ver
+                        </button>
+                    </div>
+                    <div class="sign">
+                        Üye Ol
+                    </div>
+                    <div class="log">
+                        Giriş Yap
                     </div>
                 </div>
             </div>
-            <!--  .header-container Ends  -->
+        </div>
+        <!--  .header-container Ends  -->
 
 
-            <div class="content-wrapper">
-                adasdasdasdasd asd as
 
-            </div>
-            <!-- .content-wrapper Ends-->
-
-            <div class="footer">
-                <div class="footer-content">
-                    <div class="footerTable">
-                        <table>
-                            <tr>
-                                <th>Kurumsal</th>
-                                <th>Hizmetlerimiz</th>
-                                <th>Mağazalar</th>
-                                <th>Gizlilik ve Kullanım</th>
-                                <th>Bizi Takip Edin</th>
-                            </tr>
-                            <tr>
-                                <td>Hakkımızda</td>
-                                <td>Doping</td>
-                                <td>Mağazam</td>
-                                <td>Güvenli Alışverişin İpuçları</td>
-                                <td><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</td>
-                            </tr>
-                            <tr>
-                                <td>Medya İletişimi ve Görseller</td>
-                                <td>Güvenli e-ticaret(GeT)</td>
-                                <td>Mağaza açmak istiyorum</td>
-                                <td>Kullanım Koşulları</td>
-                                <td><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</td>
-                            </tr>
-                            <tr>
-                                <td>İnsan Kaynakları</td>
-                                <td>Toplu Ürün Girişi</td>
-                                <td>Neden Mağaza</td>
-                                <td>Üyelik Sözleşmesi</td>
-                                <td><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</td>
-                            </tr>
-                            <tr>
-                                <td>İletişim</td>
-                                <td>Reklam</td>
-                                <td>Mağaza Fiyatları</td>
-                                <td>Gizlilik Politikası</td>
-                                <td><i class="fa fa-google-plus-square" aria-hidden="true"></i> Google+</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Mobil</td>
-                                <td></td>
-                                <td>Yardım ve iletişim Rehberi</td>
-                                <td><i class="fa fa-pinterest-square" aria-hidden="true"></i> Pinterest</td>
-                            </tr>
-                            <tr>
-                                <td></td>
-                                <td>Emlak Ofisim</td>
-                                <td></td>
-                                <td></td>
-                                <td><i class="fa fa-youtube-square" aria-hidden="true"></i> Youtube</td>
-                            </tr>
-                        </table>
+        <div class="content-wrapper">
+            <div class="leftBar">
+                <div class="category-wrapper">
+                    <div class="categoryTitle">
+                        Kategoriler
                     </div>
-                    <!--.footerTable Ends-->
-                    <div class="contact">
-                        <div class="contactLeft">
-                            
-                            <div class="perItem">
-                                <div class="taskImage">
-                                    <i class="fa fa-phone" aria-hidden="true"></i>                            
-                                </div>
-                                <div class="info-table">
 
-                                    <table>
-                                        <tr>
-                                            <th>7/24 Müşteri Hizmetleri</th>
-                                        </tr>
-                                        <tr>
-                                            <td>0 850 222 44 44</td>
-                                        </tr>
-                                    </table>
-
-                                </div>
-                            </div>
-                            <!-- .perItem Ends for First item-->
-
-                            <div class="perItem">
-                                <div class="taskImage">
-                                    <i class="fa fa-envelope" aria-hidden="true"></i>
-                                </div>
-                                <div class="info-table">
-                                    <table>
-                                        <tr>
-                                            <th>Destek Merkezi</th>
-                                        </tr>
-                                        <tr>
-                                            <td>sahibinden.com/destek</td>
-                                        </tr>
-                                    </table>
-
-                                </div>
-                            </div>
-                            <!-- .perItem Ends for Second item-->
-
-                        </div>
-                        <!-- .contactLeft Ends -->
-
-                        <div class="contactRight">
-                                <div class="appPlayStore">
-                                    <img src="gallery/appStore.png" />
-                                </div>
-
-                            <div class="appPlayStore">
-                                <img src="gallery/playStore.png" />
-                            </div>  
-                        </div>
-                        <!-- .contactRight Ends -->
-
-                    </div>
-                    <!--.contact Ends-->
-
-                    <div class="warning">
-                        sahibinden.com'da yer alan kullanıcıların oluşturduğu tüm içerik, görüş ve bilgilerin doğruluğu, eksiksiz ve değişmez olduğu, 
-                        yayınlanması ile ilgili yasal yükümlülükler içeriği oluşturan kullanıcıya aittir.Bu içeriğin, görüş ve bilgilerin yanlışlık,
-                         eksiklik veya yasalarla düzenlenmiş kurallara aykırılığından sahibinden.com hiçbir şekilde sorumlu değildir. 
-                        Sorularınız için ilan sahibi ile irtibata geçebilirsiniz. Yer Sağlayıcı Belge No : 581
-                        
-                    </div>
-                    <!-- .warning Ends-->
-
-                         <div class="copyRight">
-                            <div class="colmn-left"> 
-                                Copyright © 2000-2016 sahibinden.com 
-                                </div>
-                            <div class="colmn-right"> Limitli Adetlerde ve Belirli Kategorilerde <a href="#"> English</a></div>
-                            
-
-                                                             
-
-                    </div>
-                    <!-- .copyRight Ends-->
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/acilIcon.png" /></div><a href="#">Acil Acil</a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/priceDown.png"/></div><a href="#">Fiyati Düşenler</a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/clock.png" /></div><a href="#">Son 48 saat/1 Hafta/1 Ay</a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/get.png" /></div><a href="#">Güvenli e-ticaret ilanları</a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/gunFırsat.png" /></div><a href="#">Günün fırsat ürünleri</a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/emlakEndeks.png"/></div><a href="#">Emlak Endeksi</a></div>
+                    <hr class="separator"/>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/isilan.png" /></div><a href="#">İş ilanları <span>(5434)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/usta.png" /></div><a href="#">Ustalar ve Hizmetler <span>(9123)</span></a></div>
+                    <hr class="separator" />
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/emlak.png" /></div><a href="#" class="bold">Emlak <span>(1235434)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Konut <span>(562323)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">İşyeri <span>(124123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Arsa <span>(124123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Projeler <span>(1713)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Bina <span>(12423)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Devremülk <span>(1247)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Turistik Tesis <span>(1123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/vasıta.png"/></div><a href="#" class="bold">Vasıta <span>(1238564)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Otomobil <span>(1123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Arazi,Suv & PickUp <span>(16433)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Motosiklet <span>(76345)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Minivan,Van & Panelvan <span>(1123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Ticari Araçlar <span>(46123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Kiralık Araçlar <span>(71235)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Deniz Araçları <span>(7456)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Hasarlı Araçlar <span>(37985)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#" class="bold">Tümünü Göster<img src="gallery/icons/downward.png" /></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/yedek.png" /> </div><a href="#" class="bold" >Yedek Parça Aksesuar ve Donanım & Tuning<span>(1235434)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/ikinciel.png" /> </div><a href="#" class="bold">İkinci el ve Sıfır Alışveriş<span>(1237985)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Bilgisayar <span>(312985)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Cep Telefonu <span>(37968)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Ev Dekorasyon <span>(9135)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Ev Elektroniği <span>(14985)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Elektrikli Ev Aletleri <span>(37956)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Giyim & Aksesuar <span>(3841)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Saat <span>(34125)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Anne & Bebek <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Kişisel Bakım & Kozmetik <span>(37956)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Hobi & Oyuncak <span>(3841)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Oyun & Konsol<span>(34125)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Kitap, Dergi & Film <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Müzik <span>(34125)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Spor <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Takı, Mücevher & Altın <span>(37956)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Koleksiyon <span>(3841)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Antika<span>(34125)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Bahçe & Yapı Market <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Teknik Elektronik <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Medikal Ürünler <span>(32567)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Ofis & Kırtasiye <span>(37956)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Yiyecek & İçecek <span>(3841)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Diğer Her Şey <span>(34125)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/ismakine.png" /></div><a href="#" class="bold">İş Makineleri & Sanayi<span>(103847)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">İş Makineleri <span>(12321)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Tarım Makineleri<span>(34746)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Sanayi <span>(11546)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Elektrik & Enerji <span>(6985)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/usta.png" /></div><a href="#" class="bold">Ustalar ve Hizmetler<span>(16848)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Ev Tadilat & Dekorasyon</a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Nakliye</a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Araç Servis & Bakım </a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#" class="bold">Tümünü Göster<img src="gallery/icons/downward.png" /></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/ozelders.png" /></div><a href="#" class="bold">Özel Ders Verenler <span>(4100)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Lise & Üniversite Hazırlık <span>(1231)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">İlköğretim <span>(854)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Yabancı Dil <span>(123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#" class="bold">Tümünü Göster<img src="gallery/icons/downward.png" /></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/isilan.png" /></div><a href="#" class="bold">İş ilanları <span>(4100)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Eğitim <span>(1841)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Eğlence ve Animasyon <span>(854)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Güzellik ve Bakım <span>(123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">IT ve Yazılım Geliştirme <span>(184)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">İnsan Kaynakları <span>(854)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">İnşaat ve Yapı <span>(123)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#" class="bold">Tümünü Göster<img src="gallery/icons/downward.png" /></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/yardimci.png" /></div><a href="#" class="bold">Yardımcı Arayanlar <span>(1560)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Bebek & Çocuk Bakıcısı <span>(234)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Yaşlı & Hasta Bakıcısı <span>(887)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Temizlikçi & İşlerine Yardımcı <span>(318)</span></a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/hayvan.png" /></div><a href="#" class="bold">Hayvanlar Alemi <span>(1560)</span> </a> </div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Evcil Hayvanlar <span>(234)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Akvaryum Balıkları <span>(887)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Aksesuarlar <span>(318)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Bakım Ürünleri <span>(234)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Yem ve Mama <span>(887)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Kümes Hayvanları <span>(318)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Büyükbaş Hayvanlar <span>(8154)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#">Küçükbaş Hayvanlar<span>(1273)</span></a></div>
+                    <div class="subCat"><div class="iconItem"></div><a href="#" class="bold">Tümünü Göster<img src="gallery/icons/downward.png" /></a></div>
+                    <div class="clear-left"></div>
                 </div>
-                <!-- .footer-content Ends -->
+                <!-- .category-wrapper Ends -->
+                <div class="bestForYou-wrapper">
+                    <div class="categoryTitle">Seçtiklerimiz</div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/hikaye.png"/></div><a href="#">Hikayeni Paylaş </a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/efsane.png"/></div><a href="#">Efsane İlanlar </a></div>
+                    <div class="subCat"><div class="iconItem"><img src="gallery/icons/ilginc.png"/></div><a href="#">İlginç İlanlar</a></div>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .bestForYou-wrapper Ends -->
+                <div class="news-wrapper">
+                    <div class="categoryTitle">Haberler <a>Tüm Haberler</a></div>
+                    <p>sahibinden.com "Yılın Dikkat Çeken Mobil Uygulamaları" Araştırmasında Üç Kategoride Birinci</p>
+                    <p>sahibinden.com Bir Kez Daha "Türkiye'nin en iyi iş verenleri" arasında yerini aldı</p>
+           
+                </div>
+                <!-- .news-wrapper Ends -->
             </div>
-            <!-- .footer Ends-->
-    
-        
+            <!-- .leftBar Ends -->
+
+            <div class="mainContent">
+                <div class="headBanner-wrapper">
+                    <div class="bannerItem1">
+                        <img src="gallery/banners/banner1.png" />
+                    </div>
+                    <div class="bannerItem2">
+                        <img src="gallery/banners/banner2.png" />
+                    </div>
+                </div>
+                <!-- .headBanner-wrapper ends-->
+                
+                <div class="frontItemList">
+                    <div class="categoryTitle">Anasayfa Vitrini <a>Tüm Vitrini Göster</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png"/> <a>Hello World  </a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>No text overflow allowed </a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /><a>Da da arasta</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /><a>Danger is Babilous</a>  </div>
+                    <div class="frontItem"><img src="gallery/adv/ad4.png" /><a>Some Text</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /><a>Some More Text</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>Detailed Text</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a>About the product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /><a>Producsa</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a>Detailed Text</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad4.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad4.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a>Day by day</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /><a>Shall we </a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad4.png" /><a>No pasaran .. </a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a> Daily product</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /><a> No pasaran </a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /><a>Come over me</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /><a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>Nameste</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>Come over me</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad4.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>Everydayy</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad1.png" /> <a> It's new product</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad5.png" /> <a>Everydayy</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="frontItem"><img src="gallery/adv/ad2.png" /><a>Everydayy</a> </div>
+                    <div class="frontItem"><img src="gallery/adv/ad3.png" /><a> 1 lira 1 lira</a></div>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .frontItemList Ends -->
+                
+                <div class="horizontalBanner">
+                    <img src="gallery/banners/banner3.png"/>
+                </div>
+                <!-- .horizontalBanner Ends -->
+                
+                <div class="projectExamples">
+                    <div class="categoryTitle">Projeler <a> Tüm Projeleri Göster</a></div>
+                    <div class="eachItem">
+                        <img src="gallery/adv/proj1.png"/>
+                        <div class="subText">
+                            <p>Manzara Adalar(Istanbul/Kartal)</p>
+                            <hr class="projectSeparator" />
+                            <p><span>m<sup>2</sup> Aralığı:</span> 62 m<sup>2</sup> - 291 m<sup>2</sup></p>
+                            <p><span>Teslim Tarihi:</span> Ocak 2018</p>
+                        </div>
+                    </div>
+                    
+                    <div class="eachItem">
+                        <img src="gallery/adv/proj2.png" />
+                        <div class="subText">
+                            <p>AND Pastel(Istanbul/Kartal)</p>
+                            <hr class="projectSeparator" />
+                            <p><span>m<sup>2</sup> Aralığı:</span> 74 m<sup>2</sup> - 188 m<sup>2</sup></p>
+                            <p><span>Teslim Tarihi:</span> Haziran 2018</p>
+                        </div>
+                    </div>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .projectExamples Ends -->
+
+                <div class="dailyChance">
+                    <div class="categoryTitle">Günün Fırsat Ürünleri <a> Tüm Fırsatları Göster</a></div>
+                    <div class="eachItem">
+                        <div class="discount">
+                            <div class="box"></div>
+                            <div class="clear-left"></div>
+                            <div class="box-bottom"></div>
+                        </div>
+                        <img src="gallery/adv/chance1.png"/>
+                        <a>Araç Koltuk Koruyucu Evcil Hayvan Örtüsü</a>
+                        <div class="clear-left"></div>
+                        <span>24,99 TL  </span>
+                    </div>
+                    <div class="eachItem">
+                        <div class="discount">
+                            <div class="box"></div>
+                            <div class="clear-left"></div>
+                            <div class="box-bottom"></div>
+                        </div>
+                        <img src="gallery/adv/chance2.png" />
+                        <a>Asus Zenfone GO 16GB Çift Sim Kartlı Cep Telefonu</a>
+                        <div class="clear-left"></div>
+                        <span>559 TL  </span>
+                    </div>
+                    <div class="eachItem">
+                        <div class="discount">
+                            <div class="box"></div>
+                            <div class="clear-left"></div>
+                            <div class="box-bottom"></div>
+                        </div>
+                        <img src="gallery/adv/chance3.png" />
+                        <a>Dijital Ateş Ölçer Termometre</a>
+                        <br />
+                        <br />
+                        <div class="clear-left"></div>
+                        <span>3,99 TL  </span>
+                    </div>
+                </div>
+                <!-- .dailyChance Ends -->
+
+                <div class="weirdAds">
+                    <div class="categoryTitle">İlginç İlanlar <a> Tüm İlginç İlanları Göster</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad1.png" /><a>Sahibinden Hiç Çe..</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad3.png" /><a>Sihirli Fasulye</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad2.png" /><a>En Güzel Hediye</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad3.png" /><a>Sihirli Fasulye</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad1.png" /><a>Sahibinden Hiç Çe..</a></div>
+                    <div class="frontItem"><img src="gallery/adv/weird-ad2.png" /><a>En Güzel Hediye</a></div>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .weirdAds Ends -->
+
+                <div class="popularItems">
+                    <div class="categoryTitle">Popüler Ürünler</div>
+                    <div class="eachItem"><img src="gallery/adv/pop-ad1.png"/><a>Samsung Galaxy S4</a></div>
+                    <div class="eachItem"><img src="gallery/adv/pop-ad2.png" /><a>Apple Iphone</a></div>
+                    <div class="eachItem"><img src="gallery/adv/pop-ad1.png" /><a>Samsung Galaxy S4</a></div>
+                    <div class="eachItem"><img src="gallery/adv/pop-ad2.png" /><a>Apple Iphone</a></div>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .popularItems Ends -->
+
+                <div class="mostSearch">
+                    <div class="categoryTitle">Popüler Aramalar</div>
+                    <ul>
+                        <li><a href="#">Sahibinden Kiralık Daire</a></li>
+                        <li><a href="#">Galaxy S7 Fiyat</a></li>
+                        <li><a href="#">Sıfır Arabalar</a></li>
+                        <li><a href="#">Volkswagen Fiyatları</a></li>
+                        <li><a href="#">LG G5</a></li>
+                        <li><a href="#">Bebek Arabası</a></li>
+                        <li><a href="#">Güneş Gözlüğü</a></li>
+                        <li><a href="#">Elbise Modelleri</a></li>
+                        <li><a href="#">İkinci El Opel Astra</a></li>
+                        <li><a href="#">Çay Makinesi</a></li>
+                        <li><a href="#">Epilasyon Makinesi</a></li>
+                        <li><a href="#">Otomobil Lastikleri</a></li>                
+                    </ul>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .mostSearch Ends -->
+
+                <div class="mostSearch">
+                    <div class="categoryTitle">En Çok Aranan Hizmetler</div>
+                    <ul>
+                        <li><a href="#">Boyacı</a></li>
+                        <li><a href="#">Evden Eve Nakliye</a></li>
+                        <li><a href="#">Mantolama</a></li>
+                        <li><a href="#">Su Tesisatı</a></li>
+                        <li><a href="#">Doğal Gaz Tesisatı</a></li>
+                        <li><a href="#">Oto Boya</a></li>
+                        <li><a href="#">Oto Tamiri</a></li>
+                        <li><a href="#">Elektrikçi</a></li>
+                        <li><a href="#">Çilingir</a></li>
+                        <li><a href="#">Plaka</a></li>
+                        <li><a href="#">Parke</a></li>
+                        <li><a href="#">Mutfak Yenileme</a></li>
+
+                    </ul>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .mostSearch Ends -->
+               
+
+                <div class="mostSearch">
+                    <div class="categoryTitle">En Çok Aranan İş İlanları</div>
+                    <ul>
+                        <li><a href="#">Restoran ve Konaklama</a></li>
+                        <li><a href="#">Mağaza ve Perakendecilik</a></li>
+                        <li><a href="#">Tekstil ve Konfeksiyon</a></li>
+                        <li><a href="#">Ofis Elemanı</a></li>
+                        <li><a href="#">Satış</a></li>
+                        <li><a href="#">Müşteri Hizmetleri</a></li>
+                        <li><a href="#">İstanbul İş İlanları</a></li>
+                        <li><a href="#">Ankara İş İlanları</a></li>
+                        <li><a href="#">İzmir İş İlanları</a></li>
+                        <li><a href="#">Adana İş İlanları</a></li>
+                        <li><a href="#">Bursa İş İlanları</a></li>
+                        <li><a href="#">Antalya İş İlanları</a></li>
+
+                    </ul>
+                    <div class="clear-left"></div>
+                </div>
+                <!-- .mostSearch Ends -->
+           
+
+            </div>
+            <!-- .mainContent Ends -->
+            <div class="clear-left"></div>
+
+        </div>
+        <!-- .content-wrapper Ends-->
+        <div class="clear-left"></div>
+
+
+        <div class="footer">
+            <div class="footer-content">
+                <div class="footerTable">
+                    <table>
+                        <tr>
+                            <th>Kurumsal</th>
+                            <th>Hizmetlerimiz</th>
+                            <th>Mağazalar</th>
+                            <th>Gizlilik ve Kullanım</th>
+                            <th>Bizi Takip Edin</th>
+                        </tr>
+                        <tr>
+                            <td>Hakkımızda</td>
+                            <td>Doping</td>
+                            <td>Mağazam</td>
+                            <td>Güvenli Alışverişin İpuçları</td>
+                            <td><i class="fa fa-facebook-square" aria-hidden="true"></i> Facebook</td>
+                        </tr>
+                        <tr>
+                            <td>Medya İletişimi ve Görseller</td>
+                            <td>Güvenli e-ticaret(GeT)</td>
+                            <td>Mağaza açmak istiyorum</td>
+                            <td>Kullanım Koşulları</td>
+                            <td><i class="fa fa-twitter-square" aria-hidden="true"></i> Twitter</td>
+                        </tr>
+                        <tr>
+                            <td>İnsan Kaynakları</td>
+                            <td>Toplu Ürün Girişi</td>
+                            <td>Neden Mağaza</td>
+                            <td>Üyelik Sözleşmesi</td>
+                            <td><i class="fa fa-linkedin-square" aria-hidden="true"></i> Linkedin</td>
+                        </tr>
+                        <tr>
+                            <td>İletişim</td>
+                            <td>Reklam</td>
+                            <td>Mağaza Fiyatları</td>
+                            <td>Gizlilik Politikası</td>
+                            <td><i class="fa fa-google-plus-square" aria-hidden="true"></i> Google+</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Mobil</td>
+                            <td></td>
+                            <td>Yardım ve iletişim Rehberi</td>
+                            <td><i class="fa fa-pinterest-square" aria-hidden="true"></i> Pinterest</td>
+                        </tr>
+                        <tr>
+                            <td></td>
+                            <td>Emlak Ofisim</td>
+                            <td></td>
+                            <td></td>
+                            <td><i class="fa fa-youtube-square" aria-hidden="true"></i> Youtube</td>
+                        </tr>
+                    </table>
+                </div>
+                <!--.footerTable Ends-->
+                <div class="contact">
+                    <div class="contactLeft">
+
+                        <div class="perItem">
+                            <div class="taskImage">
+                                <i class="fa fa-phone" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-table">
+
+                                <table>
+                                    <tr>
+                                        <th>7/24 Müşteri Hizmetleri</th>
+                                    </tr>
+                                    <tr>
+                                        <td>0 850 222 44 44</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- .perItem Ends for First item-->
+
+                        <div class="perItem">
+                            <div class="taskImage">
+                                <i class="fa fa-envelope" aria-hidden="true"></i>
+                            </div>
+                            <div class="info-table">
+                                <table>
+                                    <tr>
+                                        <th>Destek Merkezi</th>
+                                    </tr>
+                                    <tr>
+                                        <td>sahibinden.com/destek</td>
+                                    </tr>
+                                </table>
+
+                            </div>
+                        </div>
+                        <!-- .perItem Ends for Second item-->
+
+                    </div>
+                    <!-- .contactLeft Ends -->
+
+                    <div class="contactRight">
+                        <div class="appPlayStore">
+                            <img src="gallery/appStore.png" />
+                        </div>
+
+                        <div class="appPlayStore">
+                            <img src="gallery/playStore.png" />
+                        </div>
+                    </div>
+                    <!-- .contactRight Ends -->
+
+                </div>
+                <!--.contact Ends-->
+
+                <div class="warning">
+                    sahibinden.com'da yer alan kullanıcıların oluşturduğu tüm içerik, görüş ve bilgilerin doğruluğu, eksiksiz ve değişmez olduğu,
+                    yayınlanması ile ilgili yasal yükümlülükler içeriği oluşturan kullanıcıya aittir.Bu içeriğin, görüş ve bilgilerin yanlışlık,
+                    eksiklik veya yasalarla düzenlenmiş kurallara aykırılığından sahibinden.com hiçbir şekilde sorumlu değildir.
+                    Sorularınız için ilan sahibi ile irtibata geçebilirsiniz. Yer Sağlayıcı Belge No : 581
+
+                </div>
+                <!-- .warning Ends-->
+
+                <div class="copyRight">
+                    <div class="colmn-left">
+                        Copyright © 2000-2016 sahibinden.com
+                    </div>
+                    <div class="colmn-right"> Limitli Adetlerde ve Belirli Kategorilerde <a href="#"> English</a></div>
+
+
+
+
+                </div>
+                <!-- .copyRight Ends-->
+            </div>
+            <!-- .footer-content Ends -->
+        </div>
+        <!-- .footer Ends-->
+
+
     </form>
 
 </body>

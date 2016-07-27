@@ -1,28 +1,28 @@
 ﻿body {
-  background: linear-gradient(to bottom, #fff, #eee);
   font: 12px Helvetica;
   color: #909090; }
 
+/*#region header*/
 .header-container {
   position: absolute;
   width: 100%;
   background-color: #505050;
-  height: 34px;
+  height: 32px;
   padding: 8px 0px;
   top: 0;
   left: 0; }
 
 .header-wrapper {
-  width: 1000px;
+  width: 980px;
   margin: 0 auto;
-  height: 34px;
-  border: 3px red solid; }
+  height: 32px; }
 
 /*#region Header Logo */
 .logo-header {
   float: left;
-  width: 200px;
-  height: 34px;
+  width: 240px;
+  height: 32px;
+  margin-left: 40px;
   background-image: url("../gallery/main-logo-in-letters.jpg");
   background-size: contain;
   background-repeat: no-repeat; }
@@ -31,7 +31,6 @@
 /*#region Search */
 .search-opt {
   float: left;
-  margin-left: 95px;
   width: 400px; }
 
 .search-quick {
@@ -43,10 +42,10 @@
     border: 0;
     background-color: inherit;
     border-radius: inherit;
-    width: 280px;
+    width: 220px;
     color: #aaaaaa;
-    height: 34px;
-    font: 12px helvetica;
+    height: 32px;
+    font: 10px helvetica;
     outline: none;
     padding-left: 12px; }
     .search-quick input[type=text]:focus {
@@ -67,13 +66,13 @@
 
 .button-detail-search {
   float: left;
-  height: 34px;
+  height: 32px;
   padding: 10px 0px 0px 6px; }
   .button-detail-search a {
     text-decoration: none;
     color: #ddd;
     display: block;
-    font: 12px helvetica; }
+    font: 10px helvetica; }
 
 /*#endregion Search */
 /*#region UserPanel */
@@ -81,9 +80,9 @@
   float: right;
   margin-top: -4px;
   width: 240px;
-  height: 34px;
+  height: 32px;
   padding-top: 10px;
-  font: 12px helvetica;
+  font: 10px helvetica;
   color: #aaaaaa; }
 
 .log, .sign {
@@ -104,39 +103,333 @@
   float: right;
   width: 120px; }
   .adButton button {
-    height: 30px;
+    height: 25px;
     outline: none;
     border-radius: 3px;
     border: 0;
-    font: bold 12px Helvetica;
+    font: bold 10px Helvetica;
     color: white;
     background-color: #00aaff;
     cursor: pointer; }
 
 /*#endregion User Panel */
+/*#endregion*/
 /*#region Main*/
 .content-wrapper {
-  width: 1000px;
-  color: cadetblue;
+  width: 910px;
   margin: 0 auto;
-  height: 1200px;
-  padding: 80px 10px 10px 0px;
-  border: 3px solid red; }
+  padding-top: 40px;
+  margin-bottom: 20px; }
 
-/*#endregion*/
+.mainContent {
+  float: left;
+  width: 670px;
+  margin-left: 10px;
+  margin-top: 10px; }
+
+.headBanner-wrapper {
+  float: left;
+  width: 100%;
+  height: 210px; }
+  .headBanner-wrapper .bannerItem1 {
+    float: left;
+    width: 400px;
+    height: 100%;
+    border: 1px solid #ccc; }
+    .headBanner-wrapper .bannerItem1 img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+  .headBanner-wrapper .bannerItem2 {
+    border: 1px solid #ccc;
+    float: right;
+    width: 260px;
+    height: 100%; }
+    .headBanner-wrapper .bannerItem2 img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+
+.horizontalBanner {
+  float: left;
+  width: 100%;
+  height: 70px;
+  border: 1px solid #ccc;
+  margin-top: 10px; }
+  .horizontalBanner img {
+    width: 100%;
+    height: 100%;
+    object-fit: fill; }
+
+.frontItemList {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc; }
+
+.frontItem {
+  float: left;
+  width: 100px;
+  height: 100px;
+  margin: 10px 0px 0px 10px;
+  text-align: center; }
+  .frontItem img {
+    box-sizing: border-box;
+    width: 100%;
+    height: 80px;
+    object-fit: contain;
+    border: 1px solid #ccc; }
+  .frontItem a {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 80px;
+    float: left;
+    font: 12px Helvetica;
+    margin: 0 10px;
+    color: #070fac; }
+    .frontItem a:hover {
+      text-decoration: underline; }
+
+.projectExamples {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc; }
+  .projectExamples .eachItem {
+    width: 300px;
+    margin: 15px;
+    float: left; }
+    .projectExamples .eachItem img {
+      width: 100%;
+      height: 140px;
+      object-fit: fill; }
+    .projectExamples .eachItem .subText p:first-child {
+      font-size: 14px;
+      font-weight: 700; }
+    .projectExamples .eachItem .subText p {
+      font: 12px;
+      color: #505050; }
+      .projectExamples .eachItem .subText p span {
+        font-weight: 700; }
+
+.dailyChance {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc;
+  padding: 0; }
+  .dailyChance .eachItem:last-child {
+    border: 0;
+    margin-right: 0px; }
+  .dailyChance .eachItem {
+    position: relative;
+    margin: 0px 5px 0px 0px;
+    float: left;
+    padding: 5px 0px;
+    width: 219px;
+    border-right: 1px solid #ccc;
+    text-align: center; }
+    .dailyChance .eachItem .discount {
+      position: absolute;
+      top: 0;
+      right: 5px; }
+      .dailyChance .eachItem .discount .box {
+        float: left;
+        width: 50px;
+        height: 40px;
+        background: red; }
+      .dailyChance .eachItem .discount .box-bottom {
+        float: left;
+        width: 0px;
+        height: 0px;
+        border-width: 25px;
+        border-color: red transparent transparent transparent;
+        border-style: solid;
+        transform: scaleY(0.4);
+        margin-top: -15px; }
+    .dailyChance .eachItem img {
+      margin: 30px 40px;
+      width: 120px;
+      height: 100px;
+      object-fit: fill; }
+    .dailyChance .eachItem a {
+      color: #070fac;
+      font: 12px Helvetica;
+      width: 150px;
+      margin: 0px 5px; }
+    .dailyChance .eachItem a:hover {
+      text-decoration: underline; }
+    .dailyChance .eachItem span {
+      float: left;
+      color: indianred;
+      font-size: 20px; }
+      .dailyChance .eachItem span sup {
+        vertical-align: super;
+        font-size: 60%; }
+
+.weirdAds {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc; }
+
+.popularItems {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc; }
+  .popularItems .eachItem {
+    float: left;
+    width: 150px;
+    text-align: center;
+    margin: 10px 0px 5px 15px; }
+    .popularItems .eachItem img {
+      object-fit: contain;
+      width: 100%;
+      height: 100px; }
+    .popularItems .eachItem a {
+      color: #070fac;
+      font: 12px Helvetica;
+      width: 150px; }
+    .popularItems .eachItem a:hover {
+      text-decoration: underline; }
+
+.mostSearch {
+  margin-top: 10px;
+  float: left;
+  width: 100%;
+  border: 1px solid #ccc; }
+  .mostSearch ul {
+    margin: 0;
+    padding: 0;
+    list-style-type: none; }
+    .mostSearch ul li:nth-child(4n) {
+      border: 0; }
+    .mostSearch ul li {
+      width: 155px;
+      float: left;
+      padding: 6px 0px;
+      border-right: 1px solid #ccc;
+      margin: 0px 0px 0px 10px; }
+      .mostSearch ul li a {
+        text-decoration: none;
+        font: 11px Helvetica;
+        color: #505050; }
+      .mostSearch ul li a:hover {
+        text-decoration: underline; }
+  .mostSearch li::before {
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    content: " ";
+    margin: 0 10px 0 0;
+    background: black; }
+
+/*#region LeftBar*/
+.leftBar {
+  float: left;
+  width: 230px;
+  margin-top: 10px; }
+
+.category-wrapper {
+  width: 100%;
+  border: 1px solid #ccc;
+  padding-bottom: 5px; }
+
+.bestForYou-wrapper {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding-bottom: 5px; }
+
+.news-wrapper {
+  width: 100%;
+  border: 1px solid #ccc;
+  margin-top: 10px;
+  padding-bottom: 5px; }
+  .news-wrapper p {
+    padding: 5px;
+    color: #070fac;
+    font-weight: 700; }
+
+.subCat {
+  clear: left;
+  width: 100%;
+  padding: 5px 0px; }
+  .subCat .iconItem {
+    float: left;
+    height: 15px;
+    width: 15px;
+    border: 0;
+    margin: 0px 5px; }
+    .subCat .iconItem img {
+      width: 100%;
+      height: 100%;
+      object-fit: fill; }
+  .subCat a {
+    text-decoration: none;
+    font: 13px Helvetica;
+    color: #070fac;
+    float: left;
+    width: 180px; }
+    .subCat a span {
+      color: #505050;
+      font: 10px Helvetica; }
+    .subCat a img {
+      height: 15px;
+      width: 15px;
+      object-fit: fill; }
+    .subCat a:hover {
+      text-decoration: underline; }
+  .subCat a.bold {
+    font-weight: 700; }
+
+/*#endregion */
+.categoryTitle {
+  float: left;
+  padding: 2px 0px 2px 8px;
+  box-sizing: border-box;
+  width: 100%;
+  font: 14px Helvetica;
+  font-weight: 800;
+  color: #505050;
+  background-color: rgba(10, 55, 155, 0.03);
+  border-bottom: 1px solid #ccc; }
+  .categoryTitle a {
+    float: right;
+    text-decoration: none;
+    color: #070fac;
+    font-weight: 500;
+    font-size: 12px;
+    margin-right: 5px;
+    padding-top: 4px; }
+
+hr.separator {
+  clear: both;
+  height: 1px;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #fff;
+  margin: 18px 15px 0px 15px; }
+
+hr.projectSeparator {
+  clear: both;
+  height: 1px;
+  border-top: 1px dashed #ccc;
+  border-bottom: 1px dashed #fff; }
+
+/*#endregion Main*/
 /*#region Footer*/
 .footer {
-  position: absolute;
-  clear: both;
+  float: left;
   width: 100%;
   background-color: white;
   height: 350px;
-  left: 0;
-  padding: 0;
-  margin: 0; }
+  box-shadow: rgba(10, 55, 155, 0.03) 0px -10px 200px 80px; }
 
 .footer-content {
-  width: 1000px;
+  width: 910px;
   margin: 0 auto;
   height: 320px;
   padding: 25px 30px 0px 30px; }
@@ -159,14 +452,15 @@
 
 .contact {
   width: 100%;
-  height: 60px; }
+  height: 50px;
+  margin-bottom: 20px; }
   .contact .contactLeft {
     float: left;
-    width: 450px;
+    width: 500px;
     height: 100%; }
     .contact .contactLeft .perItem {
       float: left;
-      width: 200px;
+      width: 240px;
       padding-top: 10px;
       height: 100%; }
       .contact .contactLeft .perItem .taskImage {
@@ -197,7 +491,7 @@
     height: 100%; }
     .contact .contactRight .appPlayStore {
       float: right;
-      width: 100px;
+      width: 80px;
       height: 100%;
       padding-top: 10px;
       padding-left: 10px; }
