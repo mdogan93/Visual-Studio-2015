@@ -6,5 +6,9 @@
   {
     "outputFile": "Scss/HomePage.css",
     "inputFile": "Scss/HomePage.scss"
+  },
+  {
+    "outputFile": "Scss/GunsuCss.css",
+    "inputFile": "Scss/GunsuCss.scss"
   }
 ]
