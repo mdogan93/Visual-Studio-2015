@@ -96,7 +96,7 @@ public partial class registration : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand(tryBitch, connection);
             cmd.ExecuteNonQuery();
 
-
+          
         }
         else
         {
