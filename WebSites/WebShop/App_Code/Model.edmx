@@ -1,0 +1,210 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+  <!-- EF Runtime content -->
+  <edmx:Runtime>
+    <!-- SSDL content -->
+    <edmx:StorageModels>
+      <Schema Namespace="PixAdvertModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+        <EntityType Name="WebShop_Cart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="ClientId" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="ProductId" Type="int" Nullable="false" />
+          <Property Name="Amount" Type="int" Nullable="false" />
+          <Property Name="DatePurchased" Type="datetime" />
+          <Property Name="IsInChart" Type="bit" Nullable="false" />
+        </EntityType>
+        <EntityType Name="WebShop_Products">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeId" Type="int" Nullable="false" />
+          <Property Name="ProductName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Price" Type="int" />
+          <Property Name="Description" Type="nvarchar" MaxLength="2000" />
+          <Property Name="Image" Type="nvarchar" MaxLength="150" />
+        </EntityType>
+        <EntityType Name="WebShop_ProductTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="TypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
+        </EntityType>
+        <Association Name="FK_WebShop_Cart_WebShop_Products">
+          <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="1" />
+          <End Role="WebShop_Cart" Type="Self.WebShop_Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WebShop_Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WebShop_Cart">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WebShop_Products_WebShop_ProductTypes">
+          <End Role="WebShop_ProductTypes" Type="Self.WebShop_ProductTypes" Multiplicity="1" />
+          <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WebShop_ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WebShop_Products">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PixAdvertModelStoreContainer">
+          <EntitySet Name="WebShop_Cart" EntityType="Self.WebShop_Cart" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebShop_Products" EntityType="Self.WebShop_Products" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebShop_ProductTypes" EntityType="Self.WebShop_ProductTypes" Schema="dbo" store:Type="Tables" />
+          <AssociationSet Name="FK_WebShop_Cart_WebShop_Products" Association="Self.FK_WebShop_Cart_WebShop_Products">
+            <End Role="WebShop_Products" EntitySet="WebShop_Products" />
+            <End Role="WebShop_Cart" EntitySet="WebShop_Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WebShop_Products_WebShop_ProductTypes" Association="Self.FK_WebShop_Products_WebShop_ProductTypes">
+            <End Role="WebShop_ProductTypes" EntitySet="WebShop_ProductTypes" />
+            <End Role="WebShop_Products" EntitySet="WebShop_Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:StorageModels>
+    <!-- CSDL content -->
+    <edmx:ConceptualModels>
+      <Schema Namespace="PixAdvertModel" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+        <EntityType Name="WebShop_Cart">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="ClientId" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="ProductId" Type="Int32" Nullable="false" />
+          <Property Name="Amount" Type="Int32" Nullable="false" />
+          <Property Name="DatePurchased" Type="DateTime" Precision="3" />
+          <Property Name="IsInChart" Type="Boolean" Nullable="false" />
+          <NavigationProperty Name="WebShop_Products" Relationship="Self.FK_WebShop_Cart_WebShop_Products" FromRole="WebShop_Cart" ToRole="WebShop_Products" />
+        </EntityType>
+        <EntityType Name="WebShop_Products">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeId" Type="Int32" Nullable="false" />
+          <Property Name="ProductName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Price" Type="Int32" />
+          <Property Name="Description" Type="String" MaxLength="2000" FixedLength="false" Unicode="true" />
+          <Property Name="Image" Type="String" MaxLength="150" FixedLength="false" Unicode="true" />
+          <NavigationProperty Name="WebShop_Cart" Relationship="Self.FK_WebShop_Cart_WebShop_Products" FromRole="WebShop_Products" ToRole="WebShop_Cart" />
+          <NavigationProperty Name="WebShop_ProductTypes" Relationship="Self.FK_WebShop_Products_WebShop_ProductTypes" FromRole="WebShop_Products" ToRole="WebShop_ProductTypes" />
+        </EntityType>
+        <EntityType Name="WebShop_ProductTypes">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <NavigationProperty Name="WebShop_Products" Relationship="Self.FK_WebShop_Products_WebShop_ProductTypes" FromRole="WebShop_ProductTypes" ToRole="WebShop_Products" />
+        </EntityType>
+        <Association Name="FK_WebShop_Cart_WebShop_Products">
+          <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="1" />
+          <End Role="WebShop_Cart" Type="Self.WebShop_Cart" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WebShop_Products">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WebShop_Cart">
+              <PropertyRef Name="ProductId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <Association Name="FK_WebShop_Products_WebShop_ProductTypes">
+          <End Role="WebShop_ProductTypes" Type="Self.WebShop_ProductTypes" Multiplicity="1" />
+          <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="*" />
+          <ReferentialConstraint>
+            <Principal Role="WebShop_ProductTypes">
+              <PropertyRef Name="Id" />
+            </Principal>
+            <Dependent Role="WebShop_Products">
+              <PropertyRef Name="TypeId" />
+            </Dependent>
+          </ReferentialConstraint>
+        </Association>
+        <EntityContainer Name="PixAdvertEntities" annotation:LazyLoadingEnabled="true">
+          <EntitySet Name="WebShop_Cart" EntityType="Self.WebShop_Cart" />
+          <EntitySet Name="WebShop_Products" EntityType="Self.WebShop_Products" />
+          <EntitySet Name="WebShop_ProductTypes" EntityType="Self.WebShop_ProductTypes" />
+          <AssociationSet Name="FK_WebShop_Cart_WebShop_Products" Association="Self.FK_WebShop_Cart_WebShop_Products">
+            <End Role="WebShop_Products" EntitySet="WebShop_Products" />
+            <End Role="WebShop_Cart" EntitySet="WebShop_Cart" />
+          </AssociationSet>
+          <AssociationSet Name="FK_WebShop_Products_WebShop_ProductTypes" Association="Self.FK_WebShop_Products_WebShop_ProductTypes">
+            <End Role="WebShop_ProductTypes" EntitySet="WebShop_ProductTypes" />
+            <End Role="WebShop_Products" EntitySet="WebShop_Products" />
+          </AssociationSet>
+        </EntityContainer>
+      </Schema>
+    </edmx:ConceptualModels>
+    <!-- C-S mapping content -->
+    <edmx:Mappings>
+      <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+        <EntityContainerMapping StorageEntityContainer="PixAdvertModelStoreContainer" CdmEntityContainer="PixAdvertEntities">
+          <EntitySetMapping Name="WebShop_Cart">
+            <EntityTypeMapping TypeName="PixAdvertModel.WebShop_Cart">
+              <MappingFragment StoreEntitySet="WebShop_Cart">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="ClientId" ColumnName="ClientId" />
+                <ScalarProperty Name="ProductId" ColumnName="ProductId" />
+                <ScalarProperty Name="Amount" ColumnName="Amount" />
+                <ScalarProperty Name="DatePurchased" ColumnName="DatePurchased" />
+                <ScalarProperty Name="IsInChart" ColumnName="IsInChart" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebShop_Products">
+            <EntityTypeMapping TypeName="PixAdvertModel.WebShop_Products">
+              <MappingFragment StoreEntitySet="WebShop_Products">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TypeId" ColumnName="TypeId" />
+                <ScalarProperty Name="ProductName" ColumnName="ProductName" />
+                <ScalarProperty Name="Price" ColumnName="Price" />
+                <ScalarProperty Name="Description" ColumnName="Description" />
+                <ScalarProperty Name="Image" ColumnName="Image" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+          <EntitySetMapping Name="WebShop_ProductTypes">
+            <EntityTypeMapping TypeName="PixAdvertModel.WebShop_ProductTypes">
+              <MappingFragment StoreEntitySet="WebShop_ProductTypes">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="TypeName" ColumnName="TypeName" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
+        </EntityContainerMapping>
+      </Mapping>
+    </edmx:Mappings>
+  </edmx:Runtime>
+  <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <Connection>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="MetadataArtifactProcessing" Value="EmbedInOutputAssembly" />
+      </DesignerInfoPropertySet>
+    </Connection>
+    <Options>
+      <DesignerInfoPropertySet>
+        <DesignerProperty Name="ValidateOnBuild" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
+        <DesignerProperty Name="UseLegacyProvider" Value="false" />
+        <DesignerProperty Name="CodeGenerationStrategy" Value="None" />
+      </DesignerInfoPropertySet>
+    </Options>
+    <!-- Diagram content (shape and connector positions) -->
+    <Diagrams></Diagrams>
+  </Designer>
+</edmx:Edmx>
