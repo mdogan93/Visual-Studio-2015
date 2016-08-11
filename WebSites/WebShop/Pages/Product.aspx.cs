@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -34,4 +35,35 @@ public partial class Pages_Product : System.Web.UI.Page
 
         }
     }
+    protected void btnAdd_Click(object sender, EventArgs e)
+    {
+        if (!String.IsNullOrWhiteSpace(Request.QueryString["id"]))
+        {
+            string clientId = Context.User.Identity.GetUserId();
+            if(clientId != null)
+            {         
+                int proId = Convert.ToInt32(Request.QueryString["id"]);
+                int amount = Convert.ToInt32(ddlAmount.SelectedValue);
+
+                WebShop_Cart cart = new WebShop_Cart();
+                cart.Amount = amount;
+                cart.ClientId = clientId;
+                cart.ProductId = proId;
+                cart.DatePurchased = DateTime.Now;
+                cart.IsInChart = true;
+
+                CartModel cartModel = new CartModel();
+                lblResult.Text=cartModel.InsertCart(cart);
+            }
+            else
+            {
+                lblResult.Text = "Please login to order items";
+            }
+
+
+
+
+        }
+    }
+    
 }

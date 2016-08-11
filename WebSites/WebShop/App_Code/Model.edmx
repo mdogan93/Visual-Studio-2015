@@ -34,6 +34,17 @@
           <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="TypeName" Type="nvarchar" MaxLength="50" Nullable="false" />
         </EntityType>
+        <EntityType Name="WebShop_UserInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+          <Property Name="GUID" Type="nvarchar" MaxLength="50" Nullable="false" />
+          <Property Name="FirstName" Type="nvarchar" MaxLength="50" />
+          <Property Name="LastName" Type="nvarchar" MaxLength="50" />
+          <Property Name="Address" Type="nvarchar" MaxLength="150" Nullable="false" />
+          <Property Name="PostalCode" Type="int" Nullable="false" />
+        </EntityType>
         <Association Name="FK_WebShop_Cart_WebShop_Products">
           <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="1" />
           <End Role="WebShop_Cart" Type="Self.WebShop_Cart" Multiplicity="*" />
@@ -62,6 +73,7 @@
           <EntitySet Name="WebShop_Cart" EntityType="Self.WebShop_Cart" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WebShop_Products" EntityType="Self.WebShop_Products" Schema="dbo" store:Type="Tables" />
           <EntitySet Name="WebShop_ProductTypes" EntityType="Self.WebShop_ProductTypes" Schema="dbo" store:Type="Tables" />
+          <EntitySet Name="WebShop_UserInformation" EntityType="Self.WebShop_UserInformation" Schema="dbo" store:Type="Tables" />
           <AssociationSet Name="FK_WebShop_Cart_WebShop_Products" Association="Self.FK_WebShop_Cart_WebShop_Products">
             <End Role="WebShop_Products" EntitySet="WebShop_Products" />
             <End Role="WebShop_Cart" EntitySet="WebShop_Cart" />
@@ -109,6 +121,17 @@
           <Property Name="TypeName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
           <NavigationProperty Name="WebShop_Products" Relationship="Self.FK_WebShop_Products_WebShop_ProductTypes" FromRole="WebShop_ProductTypes" ToRole="WebShop_Products" />
         </EntityType>
+        <EntityType Name="WebShop_UserInformation">
+          <Key>
+            <PropertyRef Name="Id" />
+          </Key>
+          <Property Name="Id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+          <Property Name="GUID" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="FirstName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="LastName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="Address" Type="String" MaxLength="150" FixedLength="false" Unicode="true" Nullable="false" />
+          <Property Name="PostalCode" Type="Int32" Nullable="false" />
+        </EntityType>
         <Association Name="FK_WebShop_Cart_WebShop_Products">
           <End Role="WebShop_Products" Type="Self.WebShop_Products" Multiplicity="1" />
           <End Role="WebShop_Cart" Type="Self.WebShop_Cart" Multiplicity="*" />
@@ -137,6 +160,7 @@
           <EntitySet Name="WebShop_Cart" EntityType="Self.WebShop_Cart" />
           <EntitySet Name="WebShop_Products" EntityType="Self.WebShop_Products" />
           <EntitySet Name="WebShop_ProductTypes" EntityType="Self.WebShop_ProductTypes" />
+          <EntitySet Name="WebShop_UserInformation" EntityType="Self.WebShop_UserInformation" />
           <AssociationSet Name="FK_WebShop_Cart_WebShop_Products" Association="Self.FK_WebShop_Cart_WebShop_Products">
             <End Role="WebShop_Products" EntitySet="WebShop_Products" />
             <End Role="WebShop_Cart" EntitySet="WebShop_Cart" />
@@ -184,6 +208,18 @@
               </MappingFragment>
             </EntityTypeMapping>
           </EntitySetMapping>
+          <EntitySetMapping Name="WebShop_UserInformation">
+            <EntityTypeMapping TypeName="PixAdvertModel.WebShop_UserInformation">
+              <MappingFragment StoreEntitySet="WebShop_UserInformation">
+                <ScalarProperty Name="Id" ColumnName="Id" />
+                <ScalarProperty Name="GUID" ColumnName="GUID" />
+                <ScalarProperty Name="FirstName" ColumnName="FirstName" />
+                <ScalarProperty Name="LastName" ColumnName="LastName" />
+                <ScalarProperty Name="Address" ColumnName="Address" />
+                <ScalarProperty Name="PostalCode" ColumnName="PostalCode" />
+              </MappingFragment>
+            </EntityTypeMapping>
+          </EntitySetMapping>
         </EntityContainerMapping>
       </Mapping>
     </edmx:Mappings>
@@ -198,7 +234,7 @@
     <Options>
       <DesignerInfoPropertySet>
         <DesignerProperty Name="ValidateOnBuild" Value="true" />
-        <DesignerProperty Name="EnablePluralization" Value="true" />
+        <DesignerProperty Name="EnablePluralization" Value="false" />
         <DesignerProperty Name="IncludeForeignKeysInModel" Value="true" />
         <DesignerProperty Name="UseLegacyProvider" Value="false" />
         <DesignerProperty Name="CodeGenerationStrategy" Value="None" />

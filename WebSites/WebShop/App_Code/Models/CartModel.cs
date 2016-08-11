@@ -6,9 +6,9 @@ using System.Web;
 /// <summary>
 /// Summary description for ChartModel
 /// </summary>
-public class ChartModel
+public class CartModel
 {
-    public string InsertProductType(WebShop_Cart cart)
+    public string InsertCart(WebShop_Cart cart)
     {
         try
         {
@@ -26,7 +26,7 @@ public class ChartModel
         }
     }
 
-    public string UpdateProductType(int id, WebShop_Cart cart)
+    public string UpdateChart(int id, WebShop_Cart cart)
     {
         try
         {
@@ -48,7 +48,7 @@ public class ChartModel
         }
     }
 
-    public string DeleteProductType(int id)
+    public string DeleteFromCart(int id)
     {
         try
         {

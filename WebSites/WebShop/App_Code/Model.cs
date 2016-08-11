@@ -56,3 +56,13 @@ public partial class WebShop_ProductTypes
     [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
     public virtual ICollection<WebShop_Products> WebShop_Products { get; set; }
 }
+
+public partial class WebShop_UserInformation
+{
+    public int Id { get; set; }
+    public string GUID { get; set; }
+    public string FirstName { get; set; }
+    public string LastName { get; set; }
+    public string Address { get; set; }
+    public int PostalCode { get; set; }
+}
