@@ -26,4 +26,5 @@ public partial class PixAdvertEntities : DbContext
     public virtual DbSet<WebShop_Cart> WebShop_Cart { get; set; }
     public virtual DbSet<WebShop_Products> WebShop_Products { get; set; }
     public virtual DbSet<WebShop_ProductTypes> WebShop_ProductTypes { get; set; }
+    public virtual DbSet<WebShop_UserInformation> WebShop_UserInformation { get; set; }
 }
