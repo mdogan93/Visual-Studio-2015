@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Microsoft.AspNet.Identity;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -18,6 +19,10 @@ public partial class MasterPage : System.Web.UI.MasterPage
 
             lnkLogout.Visible = true;
             litStatus.Visible = true;
+
+            CartModel model = new CartModel();
+            string userId = HttpContext.Current.User.Identity.GetUserId();
+            litStatus.Text = String.Format("{0} ({1})",Context.User.Identity.Name, model.GetAmountOfOrders(userId));
         }
         else
         {

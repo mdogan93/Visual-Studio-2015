@@ -63,4 +63,61 @@ public class CartModel
             return "error" + e;
         }
     }
+
+    public List<WebShop_Cart> GetOrdersInCart(string userId){
+
+        PixAdvertEntities db = new PixAdvertEntities();
+        List<WebShop_Cart> orders = (from x in db.WebShop_Cart
+                               where x.ClientId == userId && x.IsInChart
+                               orderby x.DatePurchased
+                               select x).ToList();
+
+        return orders;     
+    }
+
+    public int GetAmountOfOrders(string userId)
+    {
+        try
+        {
+            PixAdvertEntities db = new PixAdvertEntities();
+            int amount = (from x in db.WebShop_Cart
+                          where x.ClientId == userId && x.IsInChart
+                          select x.Amount).Sum();
+            return amount;
+
+        }
+        catch
+        {
+
+        }
+        return 0;
+    }
+
+    public void UpdateQuantity(int id, int quantity)
+    {
+        PixAdvertEntities db = new PixAdvertEntities();
+        WebShop_Cart item = db.WebShop_Cart.Find(id);
+
+        item.Amount = quantity;
+        db.SaveChanges();
+
+    }
+    
+    public void MarkOrdersAsPaid(List<WebShop_Cart> carts)
+    {
+        PixAdvertEntities db = new PixAdvertEntities();
+        if(carts != null)
+        {
+            foreach(WebShop_Cart cart in carts)
+            {
+                WebShop_Cart temp = db.WebShop_Cart.Find(cart.Id);
+                temp.DatePurchased = DateTime.Now;
+                temp.IsInChart = false;
+                
+            }
+            db.SaveChanges();
+        }
+
+    }
+
 }
